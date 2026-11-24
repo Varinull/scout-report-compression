@@ -1,0 +1,2195 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAA4JGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgICAgICAgICAgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIgogICAgICAgICAgICB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIKICAgICAgICAgICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmV4aWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vZXhpZi8xLjAvIj4KICAgICAgICAgPHhtcDpDcmVhdG9yVG9vbD5BZG9iZSBQaG90b3Nob3AgQ0MgMjAxNyAoV2luZG93cyk8L3htcDpDcmVhdG9yVG9vbD4KICAgICAgICAgPHhtcDpDcmVhdGVEYXRlPjIwMTYtMTItMDNUMDE6MDY6NTQtMDU6MDA8L3htcDpDcmVhdGVEYXRlPgogICAgICAgICA8eG1wOk1vZGlmeURhdGU+MjAxNi0xMi0wM1QwMjozNjowMi0wNTowMDwveG1wOk1vZGlmeURhdGU+CiAgICAgICAgIDx4bXA6TWV0YWRhdGFEYXRlPjIwMTYtMTItMDNUMDI6MzY6MDItMDU6MDA8L3htcDpNZXRhZGF0YURhdGU+CiAgICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2UvcG5nPC9kYzpmb3JtYXQ+CiAgICAgICAgIDxwaG90b3Nob3A6Q29sb3JNb2RlPjM8L3Bob3Rvc2hvcDpDb2xvck1vZGU+CiAgICAgICAgIDx4bXBNTTpJbnN0YW5jZUlEPnhtcC5paWQ6Zjg4ODFjN2UtZjRlNy0xYzQxLWJkNWEtYWI2OGZiYTAwMzY4PC94bXBNTTpJbnN0YW5jZUlEPgogICAgICAgICA8eG1wTU06RG9jdW1lbnRJRD54bXAuZGlkOmY4ODgxYzdlLWY0ZTctMWM0MS1iZDVhLWFiNjhmYmEwMDM2ODwveG1wTU06RG9jdW1lbnRJRD4KICAgICAgICAgPHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD54bXAuZGlkOmY4ODgxYzdlLWY0ZTctMWM0MS1iZDVhLWFiNjhmYmEwMDM2ODwveG1wTU06T3JpZ2luYWxEb2N1bWVudElEPgogICAgICAgICA8eG1wTU06SGlzdG9yeT4KICAgICAgICAgICAgPHJkZjpTZXE+CiAgICAgICAgICAgICAgIDxyZGY6bGkgcmRmOnBhcnNlVHlwZT0iUmVzb3VyY2UiPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6YWN0aW9uPmNyZWF0ZWQ8L3N0RXZ0OmFjdGlvbj4KICAgICAgICAgICAgICAgICAgPHN0RXZ0Omluc3RhbmNlSUQ+eG1wLmlpZDpmODg4MWM3ZS1mNGU3LTFjNDEtYmQ1YS1hYjY4ZmJhMDAzNjg8L3N0RXZ0Omluc3RhbmNlSUQ+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDp3aGVuPjIwMTYtMTItMDNUMDE6MDY6NTQtMDU6MDA8L3N0RXZ0OndoZW4+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDpzb2Z0d2FyZUFnZW50PkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE3IChXaW5kb3dzKTwvc3RFdnQ6c29mdHdhcmVBZ2VudD4KICAgICAgICAgICAgICAgPC9yZGY6bGk+CiAgICAgICAgICAgIDwvcmRmOlNlcT4KICAgICAgICAgPC94bXBNTTpIaXN0b3J5PgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICAgICA8dGlmZjpYUmVzb2x1dGlvbj43MjAwMDAvMTAwMDA8L3RpZmY6WFJlc29sdXRpb24+CiAgICAgICAgIDx0aWZmOllSZXNvbHV0aW9uPjcyMDAwMC8xMDAwMDwvdGlmZjpZUmVzb2x1dGlvbj4KICAgICAgICAgPHRpZmY6UmVzb2x1dGlvblVuaXQ+MjwvdGlmZjpSZXNvbHV0aW9uVW5pdD4KICAgICAgICAgPGV4aWY6Q29sb3JTcGFjZT42NTUzNTwvZXhpZjpDb2xvclNwYWNlPgogICAgICAgICA8ZXhpZjpQaXhlbFhEaW1lbnNpb24+MzI8L2V4aWY6UGl4ZWxYRGltZW5zaW9uPgogICAgICAgICA8ZXhpZjpQaXhlbFlEaW1lbnNpb24+MzI8L2V4aWY6UGl4ZWxZRGltZW5zaW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/Po1KyCwAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAABCtJREFUeNrEl1tsFGUUx3/fzOylu/RCadrUVhOb0mLAWK0BUUlBN8hL1Vij0hgoCUy9+9AYMSZq9EXgAW8Jsn2oWnxQAvGhWEg0xZQWMGyKoYJJm5JUmnKRJrTddm8znw/d2ul2d7pTSTjJSSbfuf2/k3P5RkgpubOkh+C1C5wsrUXCUjhfwl4JIQm9El6RoNjaSPkfawAIhXGXbynwy4ATwGrL2XpgA/ByMp4tKSBBSvY+2IQpFKcA3kkJPkuNwIvZOJiJmIhw6u7H+OShnU6Cu4GnbeQvZA8AIB7mo0db2L3urWwBSCBuI485AyAlxMLsqd3FE/VBhnLLFrONAz/YyNudAQCQJiRidN2zgfUNh9hXs52o6rKz/wo4m+b8AHAsGwAC/VwGaC5w5bDuyhlaf/uY+8cGM/nwAG8CTwFTwHfAkXSK48XFjFZWUt3TkwWAWdJy8BgROjpeJTDy+5JGzcSKFYTq6xlcu5ao38/r27bNuV/UOjFN1JPLUF4ZjDgLHFm2jFONjQyvWcNUQQGuaBRXJGJTA5nINHCZCTuNTcA+YLP1cKy8nP6NG4n5fLinpxGmuTDB/3OQVwDvAjuTl9kM/AKYABfr6nDFYiiGMTf5df22AQgAh4ASy5lhbesAMBQMOmjD7OlDoCMlOEAPYJ7fsmXejVNvPS8D8mDt/L5sDqVVVKUJ4AW+BranK1eg7WJdHTWdnQuXbgYQCzKQBKQkgwlAIIQS1rwa8ClQDexKFp2VhsOFhX+cbWgQjnJp3c12fN9LR703vAV3Wfb65zN7NMlCfN/V1MQX7e0iW59yxtJGqJ+b+37jkvrIs99y05OHBFVCvxVA1Ofb1LZ/P06CSynti3BefSQiWl9RFVHVDfAAsMqieiGak9NtaprqtJqz6gLRHBKgaCVTN8mPTQI8D1iDHYn6/YmE260EW1ttfQaDQeEYgDxYKxFKrCA6gdeIkzrxgDNTy5cTd7slUi5WhKrjQSSaQwpuf1FhbHxUkUYJUGkRjwC9/5SXY2oaxGJmhpvPXthYwiASHkzD0C8dBXgGyLcIO4GJaxUVSCEWbUFd16VzAG7f9I4/D1/fOnhCTTOEOgBqjh+n+PJlDE1z2QQ3sy7CmcJL1sCXqxjz5glTKGXAwxa1KaAXoHRgoKr69Glfwu1WM6Q/+y5IN45PltbeO+7yr06+hq3LpxrYY6rqk6MrV04qhuHoV0sTzaFcwAeMpbxypWgOgRACX5Gn5a+fbuXHJ99Osc8FuoH3417vgWsVFaiJhDMAwESSU3KjgZYDRlTu6Psm8l5fW5WQMpCidQNomX0BJ/e+OZtyXddt05+hDSVoPkrCV3lu6FcaB37m8avnAbam9PAxYDfQbzN0ssrAgkdoYLibtq4PKA9ft0puAX8DV4DPgB9vx7+xuNO/5/8OAPiX/nDnm7w5AAAAAElFTkSuQmCC" />
+  <title>Reporting &amp; Data-Prep Bottleneck Compression, Local ROI &amp; Schema Profiler</title>
+  <style>
+        :root, [data-theme="dark"] {
+      --bg: #0a0908;
+      --bg-elev: #111010;
+      --bg-card: #151312;
+      --bg-input: #0e0d0c;
+      --border: #2a2623;
+      --border-strong: #3d3630;
+      --text: #f0ece6;
+      --text-muted: #9c958e;
+      --accent: #f97316;
+      --accent-strong: #ea580c;
+      --accent-soft: rgba(249, 115, 22, 0.14);
+      --success: #10b981;
+      --success-soft: rgba(16, 185, 129, 0.13);
+      --warn: #f59e0b;
+      --warn-soft: rgba(245, 158, 11, 0.14);
+      --danger: #ef4444;
+      --danger-soft: rgba(239, 68, 68, 0.14);
+      --shadow: 0 12px 30px rgba(0, 0, 0, 0.42);
+      --mono: "Space Grotesk", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      --sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    [data-theme="light"] {
+      --bg: #f4f1ea;
+      --bg-elev: #faf8f3;
+      --bg-card: #fcfbf8;
+      --bg-input: #efeae0;
+      --border: #d8d0c3;
+      --border-strong: #c2b8a8;
+      --text: #24201d;
+      --text-muted: #5c554e;
+      --accent: #d95b08;
+      --accent-strong: #b84a04;
+      --accent-soft: rgba(217, 91, 8, 0.1);
+      --success: #059669;
+      --success-soft: rgba(5, 150, 105, 0.1);
+      --warn: #b45309;
+      --warn-soft: rgba(180, 83, 9, 0.1);
+      --danger: #b91c1c;
+      --danger-soft: rgba(185, 28, 28, 0.09);
+      --shadow: 0 6px 20px rgba(36, 32, 29, 0.05);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .topbar {
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-elev);
+      position: sticky;
+      top: 0;
+      z-index: 40;
+    }
+    .topbar-inner {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: 0.8rem clamp(16px, 3vw, 48px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 700;
+      font-size: 0.98rem;
+      letter-spacing: -0.01em;
+    }
+    .brand-badge {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid var(--border-strong);
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .trust-pills {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .pill {
+      font-size: 0.76rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .pill.green {
+      color: var(--success);
+      background: var(--success-soft);
+      border-color: rgba(34, 197, 94, 0.3);
+      font-weight: 600;
+    }
+
+    .demo-banner {
+      width: 100%;
+      background: linear-gradient(90deg, rgba(245, 158, 11, 0.16), rgba(56, 189, 248, 0.14));
+      border-bottom: 1px solid var(--warn);
+      padding: 0.65rem clamp(16px, 3vw, 48px);
+      font-size: 0.87rem;
+      display: none;
+    }
+    .demo-banner.active { display: block; }
+    .demo-banner-inner {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: clamp(18px, 2.5vw, 36px) clamp(16px, 3vw, 48px) 4rem;
+    }
+
+    .hero {
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      margin: 0 0 0.45rem;
+      font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+      letter-spacing: -0.02em;
+    }
+    .hero p {
+      margin: 0;
+      color: var(--text-muted);
+      max-width: none;
+      font-size: 0.97rem;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.35rem 1.45rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 1.35rem;
+    }
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .card-title {
+      margin: 0;
+      font-size: 1.08rem;
+      font-weight: 700;
+    }
+    .card-sub {
+      margin: 0.2rem 0 0;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 1rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 1rem; }
+    .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 0.9rem; }
+    .grid-2 > *, .grid-3 > *, .grid-4 > *, .check-grid > * { min-width: 0; }
+
+    label.field-label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      color: var(--text);
+    }
+    .field-hint {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.6rem 0.75rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-input);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 0.9rem;
+    }
+    textarea {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      min-height: 118px;
+      resize: vertical;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .check-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+      gap: 0.6rem;
+    }
+    .check-tile {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      padding: 0.65rem 0.8rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-input);
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: border-color 0.15s ease;
+    }
+    .check-tile:hover { border-color: var(--border-strong); }
+    .check-tile input { margin-top: 0.2rem; accent-color: var(--accent); }
+    .check-tile strong { display: block; font-size: 0.85rem; }
+    .check-tile span { color: var(--text-muted); font-size: 0.77rem; }
+
+    .btn-row {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+    button, .btn {
+      cursor: pointer;
+      border-radius: 8px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-elev);
+      color: var(--text);
+      padding: 0.55rem 0.95rem;
+      font-size: 0.86rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: all 0.15s ease;
+    }
+    button:hover, .btn:hover {
+      border-color: var(--accent);
+      text-decoration: none;
+    }
+    button.primary {
+      background: var(--accent-strong);
+      border-color: var(--accent-strong);
+      color: #ffffff;
+      padding: 0.7rem 1.3rem;
+      font-size: 0.94rem;
+    }
+    button.primary:hover { filter: brightness(1.08); }
+    button.subtle {
+      padding: 0.35rem 0.7rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .metric-card {
+      background: var(--bg-input);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.1rem;
+    }
+    .metric-label {
+      font-size: 0.77rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
+    }
+    .metric-value {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--accent);
+      font-family: var(--mono);
+      line-height: 1.25;
+    }
+    .metric-value.is-text {
+      font-size: 1.08rem;
+      font-family: var(--sans);
+      font-weight: 700;
+      color: var(--text);
+    }
+    .metric-sub {
+      font-size: 0.77rem;
+      line-height: 1.45;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+      padding-top: 0.35rem;
+      border-top: 1px dashed var(--border);
+      font-family: var(--sans);
+      font-weight: 500;
+    }
+    .metric-sub div + div { margin-top: 2px; }
+
+    .compression-bar-wrap {
+      margin: 1.1rem 0 0.4rem;
+      padding: 0.95rem 1.1rem;
+      border-radius: 10px;
+      background: var(--bg-input);
+      border: 1px solid var(--border);
+    }
+    .bar-track {
+      height: 14px;
+      border-radius: 999px;
+      background: var(--border);
+      overflow: hidden;
+      display: flex;
+      margin: 0.55rem 0;
+    }
+    .bar-reclaimed { background: linear-gradient(90deg, var(--accent-strong), var(--success)); }
+    .bar-human { background: var(--warn); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 0.58rem 0.65rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    th {
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      background: var(--bg-input);
+    }
+    .mono { font-family: var(--mono); }
+
+    .badge {
+      display: inline-block;
+      padding: 0.16rem 0.5rem;
+      border-radius: 5px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      font-family: var(--mono);
+    }
+    .badge.HIGH, .badge.CRITICAL { background: var(--danger-soft); color: var(--danger); }
+    .badge.MEDIUM, .badge.ACTION_REQUIRED { background: var(--warn-soft); color: var(--warn); }
+    .badge.LOW, .badge.READY, .badge.RECOMMENDED { background: var(--success-soft); color: var(--success); }
+
+    .finding-item {
+      border: 1px solid var(--border);
+      background: var(--bg-input);
+      border-radius: 10px;
+      padding: 0.95rem 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+    .finding-head {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin-bottom: 0.35rem;
+      flex-wrap: wrap;
+    }
+
+    .pull-card {
+      border: 1px solid var(--border-strong);
+      background: linear-gradient(135deg, var(--accent-soft), rgba(34, 197, 94, 0.07));
+      border-radius: 12px;
+      padding: 1.2rem 1.35rem;
+      margin-top: 1.25rem;
+    }
+
+    details {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      background: var(--bg-input);
+      margin-top: 0.85rem;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.88rem;
+    }
+
+    #resultsSection { display: none; }
+    #resultsSection.visible { display: block; }
+    #scanResultsBox { display: none; margin-top: 1rem; }
+    #scanResultsBox.visible { display: block; }
+    .status-note { font-size: 0.8rem; color: var(--text-muted); }
+  
+    /* === VARINULL BRAND & EASY-EYE THEME OVERRIDES === */
+    .vn-brand-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none !important;
+    }
+    .vn-wordmark-img {
+      height: 28px;
+      width: auto;
+      display: block;
+      background: transparent !important;
+      border: none !important;
+      user-select: none;
+    }
+    .vn-brand-sep {
+      width: 1px;
+      height: 24px;
+      background: var(--border);
+      flex-shrink: 0;
+    }
+    html[data-theme="light"] input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+    html[data-theme="light"] select,
+    html[data-theme="light"] textarea,
+    html[data-theme="light"] pre,
+    html[data-theme="light"] code {
+      background-color: #efeae0 !important;
+      color: #24201d !important;
+      border-color: #d6cebf !important;
+    }
+    html[data-theme="light"] .card,
+    html[data-theme="light"] section.card,
+    html[data-theme="light"] details {
+      background-color: #fcfbf8 !important;
+      border-color: #dcd5c9 !important;
+      box-shadow: 0 6px 20px rgba(36, 32, 29, 0.05) !important;
+    }
+    html[data-theme="light"] header,
+    html[data-theme="light"] .topbar {
+      background-color: #faf8f3 !important;
+      border-color: #dcd5c9 !important;
+    }
+
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <a href="/" class="vn-brand-wrap" title="Varinull Home">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKgAAAA+CAYAAAC/dFDqAAAO1klEQVR42u2deXwV1RXHv/PmvZeEJISwRIhsgrKZIgkSRKC4AKK0VupWLShSPijyaZFWq1XRorS17vqprWvdanEpCirihiIudUHZFDAoS0NYE9QAyVtn+se9TyaTt8y89/LiI3M+n3xg5s3cucvvnnPuueecqzBjJVlLLjedGurY/PSZtA8cbI0a/Ag4GzgWKAFqgXXAS8CnP5RuWjh3Lrv79MEdCGTdELtxKBkqAm4FJgPtTL/9HLgOeAK4WoLWoWR5ULY3QNE1vFowk588AngDmBEFnMaJPw14HSh1YNZWAaprHMzryOpO/TPZXw8Dwyw+Xw48DnhbdRJrmgPQ1gJoo7cd88t/lakvngX8xOY7Y4FzW6uLAnl5+Nu1Q9F1B6CtQsEGXjvqFD7pMigTX7ssyfcuBZTW6J49ffpQ1707ajDoALR1uKhOSHExY8yN7Mrr1JJf6gyUJfluGXBka3TPhtGjs5Z7Hj6r+FAjq7sOYeLE+1i6ZCYljd+0xFe6AsnOgAKgGNjeEhWr7dEDTVWbsegDxcVsKS/PSvPSYWZmUiBQz2fdypl4xn28+vJMOvm/S/dHwsAParXhKyjg7WnT2DZ4MLrLBSZOqQCucDirOaiLw4YU8NezslsFp028j68L0y5Rd6Zg0/wG2J3OyjQWFrJkzhw2DR+OommowSBqKNTkzxUKNQOtA9BW56T7+bTrECrOX8gzfcens/BvgU+SfHc1sCed4Hxl9mx29OtH7oEDWc0h2xhAJUhDPuo97Zg89hYu/fH1NLhz01X4g0m+d386W/jW9OnsGDCAnIYGDndSGTrj8GyZHkZTFD4tHcrC3mPICQcZWrsh1VK/AvoAx9l451ng5nQ1a93YsawdNw6v309boMMXoAKlEA5Ql1/CS31P44sORzF073o6+utTKfRNhNnIyvbVW8DFQGM6WrN27FhWTJmCOxg8rMV6GwKoJC0M4QDrux7HC73GEHaplO3bRE44KeN1AFgEBCVQ86M8UwvcA8wEkp8NisLOfv2oLylh87BhvH/BBajBIK4s3rq0r7Bls7tdMhxV9YKngFHb3uHZN66iW0NdKgUeCYwDKhH77QG5IHoV+B9Jmo6qRoygasQIUBT29uqF5hJLBXcg0GY4ZxsFqIE8eZQ01PLQW3M5c9uKVq9Obc+erBk/nuqyMg4WFwsHD13HnaVblA5A00HuXHLDft5bODkdC6ikaF9pKWsmTGDT8OEE8vJwBwK4wmEcchyWIeTDl9uerYWlGQdoXffurB0/nk2VlQTy8/H4fHgbGx1EOgBtvoDyaKGMfe67khI+mziRryor8RcUCGC2AXsmjqE+O2jV6aez6owz0NxuvA0NWe1M7HDQ7KARwClAe0Sw3HtxOUI4jNfnc4DpALTF6QREcNwZBkl0KVABbI72gq4ofFNaKpw4HHJEPC3nuHwP8A4i/MNlivY8IdaLX44cSc2gQVntn+lw0B82/RS4G7EfT5yoz2b0VWUlb0+bhquN2zUdDtoy5AH+AixOAE6AXeYbvsJCPjjvPFCUNrVN6XDQzFAp8AgwweLzW5pclJfzyaRJHOjUyRHtDkDTThXAU8AAi8/vAjaZQzIaioocI7wj4tNOE4ClNsCJXDjVRcD5yuzZ+AoKHHA6AE07XQw8j0gIZodeANBcLl6bNYuaAQMcsZ4mEe9BBAEGUgC6F/BlqN5eQAV0+/EgCZ2HrwX+ZLgOInw6E4Uc1wLLAD4/5RSqy8rMIRlu2c96nLppgB1X+bwUnaHz5JjpLVS+ecw0IGQXoDcC58gOeh24xiZQZwCXywqskf83B6a3Ay4BRstv6jEGKAhslAMdb0fmEeD4JAG6H1gJvIjw2yQv5AdhHrodkbEuArjngb8j0tfcTmLv+dr6khI+Ovts3CIkoy8i7c2psnxPgjrrwD7gv8BzxA7SGwzcifBH3Qf8AVhhMwHaA4ioAJ+0UDxr+L0fwtbbW07OGyN9lYIFZIIE6GLgJjnWlgB6DRCJKjsWeBJYZWMGXgkcI68HAgvk4BtpPPA3G426UTbkCmBblN+PsakbmmkYwtt9Gbp++RvdK6vG1Xw4XIJzI/CobEe1fP5kC2Uu1hWF5VOnEsjLw+P3T5MDU5JE/UbJtt8nx8fMVSdL0BuZhB2ATgJ+ZriebQLo2SarxawUAHo08DvT9UNYdOh2RWl8rk2OFLSg126OAbR45Z4FvAZ0I3rYBaakCkEpPqL9BeUzZjqVYOPi246/rMuKbuUvIYLhRiByf1YbnksUf7QfeKe6rIztAwfi8fvPl1w+GjiDMeqnReE8VwB/xVKogC0yp40MRel/I6VivM0x9X2jnbVPNHFrt7FW3l8LDJcD7Y7TkErg1wZ9r7/kdDckqMNfJQdQEkzGIgnAq4AOsroD0MOTLz7pprs2PHvO2txwVBVwSILvrwBqNp1wAprb7SYQuNb0+0rgFgl6f4x6qrJ+F8lFWoRmIsKWN9rs83ik2RzDVOJM9FTKy6QddDeJs2sslTrRLTbAEeHQayzW423gKGD6If7hL9/asS9XnHglt314F4XBBrO+lkidWNRYVMT2gQNx+/1dgJ4mMPxeftcKfSzF6xGGxUVPE0DblJlJiSIuSSFfUappBj9OwhTmTSJLiEnwNvLAcVMYc+bD1OZ2MP5SeYjbRqXvgKXoOoHcXBRdV019Eo6yaEzUp/vTyMGy3sykR/HWsUrFUZwjzDKyD8JfskLqkzkk9hZq6cFRm39DB10jL+SjuGnc/BgLq/ea/Z07o6kq6FHDLlWbTMOxTxsA+gUw0nDvt9LcFLZoYioxcZN1hkG5Tir6xSnUsSSjHaKFUHXNCJaTrRjntw0eTKCggJwDBxxUpVnE30HzlNWnYy0m/Deme48hcmAqCLe0eSmCk0zndzdlHRkgTW/xVIU3IzHr6LqDqBbgoIuA5cBJhvs3SBNPPGPq1abdlTppngFhp5xlMgstkIugoIVEsXPlv5nVvxSFKVWvGO+MTqCSLAd2aqpKdVlZ1qbZzgYddB7wY4PuMwyxu7SA2MbXS0z37gZ2cGgnQjGZmaZiL2X2zNYAKM0dlOPRi8ZoTSfOqOWcRZYjdm6MdD2xjfbXIdJaR2gbTXeKchIsnBJRnWm3ypv+HDjN9wbc4QDtQj6j7jsiThkH5QKJYE6Og6QMeDPNMwFpEE0NxhjO/rnAdO8Wk+lGT9H0pJh2tnIsmGaSLV/0g+qh5zdbGLfjI+PqvWOcMj5EbtdVl5XxXZcuqE4wXIs6LK9B7MNPN9y7Ror5epO3jxEw6+TiiJbL+JVQzHcEuljceOhPc+/4PYdW8GGr4v31JvVSFAdNGfCo/wvC+6ZIXvdGeCdFdnZGIvbIjXQzLetmZwWgEXOWakGsdzZx0CDoC/DmM2nL8shTHRBZ6+Jx7Le+L8AR8RlzWN4M/MN07zeSOyFX10ZQvwsszMAkcls45uUICb5Yf13kn2Jy8piJy7uyY/0Ozt38ZuT+iQYrAjHijtZHLjaMGeOYmDLoUX+nPNEiQt2k2B8FnEZzt7iWXroWILJ2JOPNowMH5IImZLBdrgLuQjiwPILq5erPHjQmEEsk3lcC32/Yd/vyS7w+H2GPx0FUBgC6l+bG+ysQh6ga6WWsO0C0NHu5AbHBsNj0LQ3h+HwlYqu1FGGjrUTsmG3AncfI6vf5/ZonI+/kk3ijokm7Rzz3HOfcdBMddu5sLZDqWVS+bqe8WHu+D2GITpQml/4ms9EfsecTaIfsLod3Ibzwz0LYcxdIvViVC6K7ESd0TJViPtQ0JY2LgMttFO+9EuifzTynOtbUULFkyffZkDPMWFwp9q8rzeXHs5rk2LHqxPpwPU3jcsz0NPBpnN/3mq6PRXjVW6UBSYQVROg94EIJtMekiM9BpKT5s7Q6rADmAEcT8vFBtwo2FvfG4G1OgkO5tka5f07n6uquLi0juRzN3lEnxnDsjka5NPcvMC9y95muj0e4KCZDe027hwWIfFYp+4MukAukCpp7j89PUO5GhLG9k8HY/jwi+9v+OBNDQ+zxG8FcKK0K1TY7ZhVit+t22Y7z5OpcRWxhjhY6tP4qau6sp/ueVje47qsOFvTPepr6tfaQ3/ggmJOz2wZQUqGlUoJ5DB5jHwMbJHdU4ojXHjQ/FPc/putlcmIXGJJXfAB8LsEWy+F6u7TqbDGd0LfUNPHvkUykPgYWIgGcT7gTnGYxL8oO0wOI84ISzZo5Um/1GnS7X5Ccs4g7gQNJvHZ8gcg6dwfCP+CXholTBJyP4tpcnX/EtXIh2D1BffLlJPLLTr8ZWKi7XPd8cdJJaKqqqsGg21Q3leQlQjR3vVWyLfcbBri7hbpHo8eBf5ruVck+e9TQ110TWDaM7b3INCnmSN2/zNC+URbKOtllYa95oekgq9stNvxJhB/o0iS2Os0AMwdYmXXArRbKqUIEh5VLUX9oluuhg2dtXW5FvCPNWe8jTvN4EOHNNKuhqIjNFRW4A4FvTVaQXUCNjfb6TO0LEv0YxYekpHkzyXDx9dLfYWoMnf/fcvyWYC/0eF+Ue9sQQX73cshfwwrtsXKIQoEUe+1lZZM5UnogwoHkSBsKskuact6IAtB2wEQ5oz9HZPSwa+4qBv14ctqHh9Z8/O6Hi6bmurXweptc6KnIAB8sLmbB/PmEvV4UTeslB8SN8HOoslm3jlJPa48IPU50Rugg2b+lCfpXQYRTfy37zSrw+svyu8dRz1xSN14k1YN4E3yQXIgWxhk3HVjW5k/5KD24myUvz2RIXdUkqSdbpScQ9uEggAmgjgHTSX2TgsVDcYE3n+JgA7e9fytD6qpAxIJbNdHcIDmn4wDqZLdLL8cEHVXTOH/jYuZ/dC9H7d8REamnWijhS2kReN2BjgPQ9ALT5aZ891rmrH6cUbvX0ru+2qisjbawQn0MET6814GNA1DScy5nLqgeyvas46rVT3DhpiW49aj64XEJuOZcRK4khxyApku79lC2r4rZa/7FlE0vJzrZONpqdjsifc29MUwnDjkATYE8+cxe8yTTNy6y8vQziD38HpJjLkOEEzvivJXp/y4ITXs1smzLAAAAAElFTkSuQmCC" alt="varinull" class="vn-wordmark-img" />
+        </a>
+        <span class="vn-brand-sep"></span>
+        <span>Scout #04: Recurring Report &amp; Spreadsheet Time Calculator</span>
+      </div>
+      <div class="trust-pills">
+        <span class="pill green">● Runs on Your Computer</span>
+        <span class="pill">No Login Required · No Automatic Uploads</span>
+        <a id="modeSwitchLink" class="btn subtle" href="./client-assessment.html" style="display:none;">Switch to Blank Workspace</a>
+        <button type="button" class="subtle" id="themeToggleBtn">Light / Dark</button>
+      </div>
+    </div>
+  </header>
+
+  <div id="demoBanner" class="demo-banner">
+    <div class="demo-banner-inner">
+      <div>
+        <strong>Sample Scenario Mode:</strong> Pre-loaded with mock example
+        <em>Vanguard Ops &amp; Finance, Weekly Close, Cloud Spend &amp; SLA Compliance Pack</em>
+        (3 people · 14.5 hrs/wk · 6 CSV/Excel/PDF exports). Sample runs are never saved to your local log.
+      </div>
+      <a id="exitDemoLink" class="btn subtle" href="./client-assessment.html">Switch to Blank Calculator →</a>
+    </div>
+  </div>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Recurring Report &amp; Spreadsheet Time Calculator</h1>
+      <p>
+        Combines an <strong>optional local folder check</strong> (counting rows, column headers, blank cells, duplicate IDs, and Excel <code>VLOOKUP</code>/<code>XLOOKUP</code> formulas across <code>.csv</code>, <code>.xlsx</code>, <code>.json</code>, and <code>.pdf</code> files) with a <strong>transparent hours-and-cost calculator</strong>. Actual dollar amounts and customer rows stay in browser memory and are never uploaded.
+      </p>
+    </section>
+
+    <!-- 1. INTERACTIVE LOCAL FOLDER PROFILER -->
+    <section class="card">
+      <div class="card-header">
+        <div>
+          <h2 class="card-title">1. Optional: Check a Folder of Recurring CSV, Excel, or PDF Exports</h2>
+          <p class="card-sub">
+            Counts files, column headers, duplicate IDs, blank cells, Excel lookup formulas,
+            and mismatched IDs between files right on your computer. Customer names and dollar amounts are not saved or uploaded.
+          </p>
+        </div>
+        <span class="pill green">Read-Only Local Check</span>
+      </div>
+
+      <div class="grid-2">
+        <div>
+          <label class="field-label" for="localFolderPathInput">Option A: Paste a Local Folder Path (when running the local Python server)</label>
+          <div class="btn-row">
+            <input type="text" id="localFolderPathInput" placeholder="e.g. C:\Reports\WeeklyClose" style="flex:1; min-width:220px;" />
+            <button type="button" id="scanServerFolderBtn">Scan Folder Path</button>
+            <button type="button" class="subtle" id="trySampleFolderBtn" style="display:none;">Try Sample Folder</button>
+          </div>
+          <div class="field-hint">Works when running the local Python server on your computer (<code>127.0.0.1:9104</code>).</div>
+        </div>
+
+        <div>
+          <label class="field-label" for="browserFolderPicker">Option B: Choose a Folder or Files Right in Your Browser (no setup needed)</label>
+          <div class="btn-row">
+            <input type="file" id="browserFolderPicker" webkitdirectory directory multiple style="flex: 1 1 220px; min-width: 0; font-size:0.8rem;" />
+            <input type="file" id="browserMultiFilesPicker" multiple accept=".csv,.tsv,.xlsx,.json,.pdf" style="flex: 1 1 220px; min-width: 0; font-size:0.8rem;" />
+          </div>
+          <div class="field-hint">Pick a folder or select multiple <code>.csv</code>, <code>.tsv</code>, <code>.xlsx</code>, <code>.json</code>, and <code>.pdf</code> files in browser memory.</div>
+        </div>
+      </div>
+
+      <div id="scanStatusMsg" class="status-note" style="margin-top:0.55rem;"></div>
+
+      <div id="scanResultsBox">
+        <div class="grid-4" id="scanSummaryCards" style="margin-bottom:0.9rem;"></div>
+        <div id="scanWarningsContainer" style="margin-bottom:0.85rem;"></div>
+        <div style="overflow-x:auto; margin-bottom:0.85rem;">
+          <table id="scanFilesTable">
+            <thead>
+              <tr>
+                <th>File</th>
+                <th>Type</th>
+                <th>Rows / Pages</th>
+                <th>Columns / Sheets</th>
+                <th>Blank Cells</th>
+                <th>Formulas / Duplicate IDs</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div id="scanJoinBox" style="overflow-x:auto; margin-bottom:0.85rem;"></div>
+        <div class="btn-row">
+          <button type="button" id="applyScanSuggestionsBtn">Copy File Count &amp; Detected Issues into Calculator ↓</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. WORKFLOW & ROI CALCULATOR -->
+    <form id="assessmentForm" class="card">
+      <div class="card-header">
+        <div>
+          <h2 class="card-title">2. Recurring Report Time &amp; What-If Savings Calculator</h2>
+          <p class="card-sub">No email or company name required. Enter your schedule, hours spent, hourly cost, and your own what-if time-reduction %.</p>
+        </div>
+        <div class="btn-row">
+          <button type="button" class="subtle" id="resetBlankBtn">Reset Calculator</button>
+        </div>
+      </div>
+
+      <div class="grid-3" style="margin-bottom: 1rem;">
+        <div>
+          <label class="field-label" for="workflowName">Report or Process Name</label>
+          <input type="text" id="workflowName" placeholder="e.g. Weekly Sales, Billing & Cash Reconciliation" />
+        </div>
+        <div>
+          <label class="field-label" for="cadencePreset">How Often Do You Run This?</label>
+          <div class="btn-row" style="flex-wrap:nowrap;">
+            <select id="cadencePreset" style="width: 58%;">
+              <option value="4.33">Weekly (52x / yr)</option>
+              <option value="2.17">Bi-Weekly (26x / yr)</option>
+              <option value="1" selected>Monthly (12x / yr)</option>
+              <option value="21.67">Daily Business Days (260x / yr)</option>
+              <option value="custom">Custom runs / mo</option>
+            </select>
+            <input type="number" id="runsPerMonth" step="0.01" min="0.25" value="1" style="width: 42%;" title="Runs per month" />
+          </div>
+          <div class="field-hint">Runs per month (<code>4.33</code> = 52 weekly runs/yr).</div>
+        </div>
+        <div>
+          <label class="field-label" for="peopleInvolved">People Involved &amp; Files Pulled Each Run</label>
+          <div class="btn-row" style="flex-wrap:nowrap;">
+            <input type="number" id="peopleInvolved" min="1" step="1" value="2" placeholder="People" title="People involved" />
+            <input type="number" id="exportsPerRun" min="1" step="1" value="3" placeholder="Exports" title="Exports per run" />
+          </div>
+          <div class="field-hint">Left: people touching the report · Right: files exported each time.</div>
+        </div>
+      </div>
+
+      <div class="grid-3" style="margin-bottom: 1.15rem;">
+        <div>
+          <label class="field-label" for="hoursPerRun">Total Team Hours Spent per Run</label>
+          <input type="number" id="hoursPerRun" step="0.25" min="0.25" value="6" />
+          <div class="field-hint">Combined hours spent pulling files, cleaning tabs, matching IDs, writing notes, and reviewing.</div>
+        </div>
+        <div>
+          <label class="field-label" for="hourlyRateUsd">Average Team Hourly Cost ($ USD / hr)</label>
+          <input type="number" id="hourlyRateUsd" step="1" min="15" value="85" />
+          <div class="field-hint">Approximate hourly cost per person (default $85/hr).</div>
+        </div>
+        <div>
+          <label class="field-label" for="targetReductionPct">What-If Time Reduction % (Your Estimate)</label>
+          <div class="btn-row" style="flex-wrap:nowrap;">
+            <select id="reductionPreset" style="width: 60%;">
+              <option value="25">Conservative (25%)</option>
+              <option value="50" selected>Moderate (50%)</option>
+              <option value="70">High Repetition (70%)</option>
+              <option value="custom">Custom %</option>
+            </select>
+            <input type="number" id="targetReductionPct" step="1" min="10" max="85" value="50" style="width: 40%;" title="What-if time reduction percentage" />
+          </div>
+          <div class="field-hint">Adjust this % to model conservative vs. higher time savings (not a guarantee).</div>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 1.15rem;">
+        <label class="field-label">Where Does the Data Come From?</label>
+        <div class="check-grid">
+          <label class="check-tile">
+            <input type="checkbox" name="source_formats" value="csv_excel_exports" />
+            <div>
+              <strong>CSV or Excel Exports</strong>
+              <span>Accounting, CRM, Stripe, payroll, or manual spreadsheet trackers</span>
+            </div>
+          </label>
+          <label class="check-tile">
+            <input type="checkbox" name="source_formats" value="pdf_invoices_or_contracts" />
+            <div>
+              <strong>PDF Invoices, Contracts, or Statements</strong>
+              <span>Vendor bills, rebates, order forms, or PDF statements</span>
+            </div>
+          </label>
+          <label class="check-tile">
+            <input type="checkbox" name="source_formats" value="cloud_or_saas_billing" />
+            <div>
+              <strong>Cloud or Software Billing Feeds</strong>
+              <span>AWS, Google Cloud, Azure, Snowflake, or SaaS usage exports</span>
+            </div>
+          </label>
+          <label class="check-tile">
+            <input type="checkbox" name="source_formats" value="multi_cloud_telemetry" />
+            <div>
+              <strong>Operations or Support Logs</strong>
+              <span>Ticket exports, delivery logs, or uptime reports</span>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 1.15rem;">
+        <label class="field-label">What Slows Your Team Down Most?</label>
+        <div class="check-grid">
+          <label class="check-tile">
+            <input type="checkbox" name="bottleneck_types" value="manual_copy_paste_joins" />
+            <div>
+              <strong>VLOOKUPs &amp; Copy-Pasting Between Tabs</strong>
+              <span>Manual copy-pasting, fragile Excel formulas, or broken cell links</span>
+            </div>
+          </label>
+          <label class="check-tile">
+            <input type="checkbox" name="bottleneck_types" value="reconciliation_mismatches" />
+            <div>
+              <strong>Numbers That Don't Match Across Systems</strong>
+              <span>Missing records, timing cutoffs, or hunting down why System A ≠ System B</span>
+            </div>
+          </label>
+          <label class="check-tile">
+            <input type="checkbox" name="bottleneck_types" value="manual_summary_drafting" />
+            <div>
+              <strong>Writing the Same Summary Notes by Hand</strong>
+              <span>Typing out recurring weekly or monthly commentary from scratch</span>
+            </div>
+          </label>
+          <label class="check-tile">
+            <input type="checkbox" name="bottleneck_types" value="no_signoff_audit_trail" />
+            <div>
+              <strong>No Clear Sign-Off History</strong>
+              <span>Last-minute edits in Slack or Excel with no record of who approved what</span>
+            </div>
+          </label>
+          <label class="check-tile">
+            <input type="checkbox" name="bottleneck_types" value="schema_drift_or_dirty_exports" />
+            <div>
+              <strong>Changing Columns or Duplicate Rows</strong>
+              <span>Exports where column names shift, IDs are blank, or rows are duplicated</span>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Optional Empirical CSV / XLSX Drop -->
+      <details id="empiricalCsvDetails">
+        <summary>Optional: Add Step-by-Step Minutes CSV or Sample Mismatch CSV</summary>
+        <div class="grid-2" style="margin-top: 0.9rem;">
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.35rem; gap:0.5rem; flex-wrap:wrap;">
+              <label class="field-label" style="margin:0;" for="workflowStepsCsv">Workflow Steps CSV</label>
+              <div class="btn-row">
+                <button type="button" class="subtle" id="downloadBlankStepsBtn">↓ Blank Steps CSV</button>
+                <label class="btn subtle" style="margin:0;">
+                  Upload CSV <input type="file" id="uploadStepsCsvInput" accept=".csv,.txt" style="display:none;" />
+                </label>
+              </div>
+            </div>
+            <textarea id="workflowStepsCsv" placeholder="step_order,step_name,manual_minutes,is_copy_paste,error_prone,source_type"></textarea>
+          </div>
+
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.35rem; gap:0.5rem; flex-wrap:wrap;">
+              <label class="field-label" style="margin:0;" for="reconciliationCsv">Sample Mismatch Check CSV (Source A vs B)</label>
+              <div class="btn-row">
+                <button type="button" class="subtle" id="downloadBlankReconBtn">↓ Blank Mismatch CSV</button>
+                <label class="btn subtle" style="margin:0;">
+                  Upload CSV <input type="file" id="uploadReconCsvInput" accept=".csv,.txt" style="display:none;" />
+                </label>
+              </div>
+            </div>
+            <textarea id="reconciliationCsv" placeholder="record_key,source_a_amount,source_b_amount,status_note"></textarea>
+          </div>
+        </div>
+      </details>
+
+      <!-- Completely Optional Attribution (No Login Required) -->
+      <details>
+        <summary>Optional Company / Contact Info (Not Required, Leave Blank for Private Use)</summary>
+        <div class="grid-3" style="margin-top: 0.85rem;">
+          <div>
+            <label class="field-label" for="companyName">Company / Team Name (Optional)</label>
+            <input type="text" id="companyName" placeholder="Optional" />
+          </div>
+          <div>
+            <label class="field-label" for="contactName">Your Name (Optional)</label>
+            <input type="text" id="contactName" placeholder="Optional" />
+          </div>
+          <div>
+            <label class="field-label" for="contactEmail">Contact Email (Optional)</label>
+            <input type="email" id="contactEmail" placeholder="Optional" />
+          </div>
+          <div>
+            <label class="field-label" for="industrySelect">Industry</label>
+            <select id="industrySelect">
+              <option value="general">General Business / Software / Ops</option>
+              <option value="finance">Finance, Accounting &amp; FinTech</option>
+              <option value="healthcare">Healthcare &amp; Life Sciences</option>
+              <option value="ecommerce">E-Commerce &amp; Supply Chain</option>
+              <option value="legal">Legal Services</option>
+            </select>
+          </div>
+          <div>
+            <label class="field-label" for="teamSizeSelect">Company Size</label>
+            <select id="teamSizeSelect">
+              <option value="1-50">1–50</option>
+              <option value="50-250" selected>50–250</option>
+              <option value="250-1000">250–1,000</option>
+              <option value="1000+">1,000+</option>
+            </select>
+          </div>
+        </div>
+      </details>
+
+      <div class="btn-row" style="margin-top: 1.25rem; justify-content: space-between;">
+        <button type="submit" class="primary">Calculate Current Time Cost &amp; What-If Savings</button>
+        <span id="engineStatusNote" class="status-note">Ready · Runs right in your browser</span>
+      </div>
+    </form>
+
+    <!-- 3. RESULTS & PIPELINE BLUEPRINT -->
+    <section id="resultsSection">
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div style="display:flex; align-items:center; gap:0.6rem; flex-wrap:wrap; margin-bottom:0.25rem;">
+              <span id="resSeverityBadge" class="badge HIGH">HIGH</span>
+              <span class="pill mono" id="resSprintWindowPill">Typical Scope: Scoped Upfront</span>
+            </div>
+            <h2 class="card-title" id="resScoreLabel">Reporting Time &amp; Cost Summary</h2>
+            <p class="card-sub" id="resBaselineSub"></p>
+          </div>
+          <div class="btn-row">
+            <button type="button" id="downloadMarkdownBtn">↓ Download Printable Plan (.md)</button>
+            <button type="button" id="downloadCapsuleBtn">↓ Export Full Local File (.json)</button>
+          </div>
+        </div>
+
+        <div class="finding-item" style="margin-bottom: 1rem;">
+          <strong style="display:block; font-size:0.85rem; margin-bottom:0.25rem;">Where Every Number &amp; Effort Estimate Comes From:</strong>
+          <span style="font-size:0.81rem; color:var(--text-muted);">
+            <strong>Exact arithmetic from your inputs &amp; files:</strong> Current Annual Time (<code>hours per run × runs per year</code>), Current Annual Time Cost (<code>annual hours × hourly cost</code>), and any file/formula/duplicate/mismatch counts from files you scanned.
+            <strong>What-if savings &amp; effort (up to 40 hrs/week):</strong> Savings apply your chosen <strong>What-If Reduction %</strong> (not a guarantee). Build effort assumes <strong>up to 40 hrs/week</strong>: 2–3 simple CSVs fit in 2–3 weeks, while 6+ exports or PDF/multi-system reconciliations start with a 1-week discovery followed by phased milestones.
+          </span>
+        </div>
+
+        <div class="grid-4" id="resKeyMetricsGrid"></div>
+
+        <div class="compression-bar-wrap">
+          <div style="display:flex; justify-content:space-between; font-size:0.83rem; flex-wrap:wrap; gap:0.5rem;">
+            <span id="barLeftLabel"><strong>What-If Automated Prep:</strong> 50%</span>
+            <span id="barRightLabel"><strong>Remaining Manual &amp; Sign-Off Time:</strong> ~3.0 hrs/run</span>
+          </div>
+          <div class="bar-track">
+            <div id="barReclaimedFill" class="bar-reclaimed" style="width: 50%;"></div>
+            <div id="barHumanFill" class="bar-human" style="width: 50%;"></div>
+          </div>
+          <div class="field-hint">
+            Automating repetitive file imports and ID matching frees up prep time while keeping every mismatch
+            and final total in a clear human sign-off step before numbers are shared.
+          </div>
+        </div>
+
+        <!-- Step Breakdown Table -->
+        <div id="stepBreakdownWrap" style="margin-top: 1.25rem; display:none;">
+          <h3 style="font-size:0.96rem; margin: 0 0 0.55rem;">Step-by-Step Time Breakdown (Using Your What-If %)</h3>
+          <div style="overflow-x:auto;">
+            <table id="stepBreakdownTable">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Workflow Step</th>
+                  <th>Current (min)</th>
+                  <th>What-If Target (min)</th>
+                  <th>Suggested Handling</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Reconciliation Discrepancies Table -->
+        <div id="reconWrap" style="margin-top: 1.25rem; display:none;">
+          <h3 style="font-size:0.96rem; margin: 0 0 0.45rem;">Sample Mismatch Check (From Your Uploaded CSV)</h3>
+          <p class="card-sub" id="reconSummaryLine" style="margin-bottom:0.6rem;"></p>
+          <div style="overflow-x:auto;">
+            <table id="reconTable">
+              <thead>
+                <tr>
+                  <th>Record ID</th>
+                  <th>Mismatch Type</th>
+                  <th>Source A</th>
+                  <th>Source B</th>
+                  <th>Difference ($)</th>
+                  <th>Note</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Top Findings -->
+        <div style="margin-top: 1.35rem;">
+          <h3 style="font-size:0.96rem; margin: 0 0 0.65rem;">Key Bottlenecks &amp; Practical Next Steps</h3>
+          <div id="findingsList"></div>
+        </div>
+
+        <!-- Safe-to-Deploy Checklist -->
+        <div style="margin-top: 1.35rem;">
+          <h3 style="font-size:0.96rem; margin: 0 0 0.6rem;">Step-by-Step Automation &amp; Human Sign-Off Checklist</h3>
+          <div style="overflow-x:auto;">
+            <table id="checklistTable">
+              <thead>
+                <tr>
+                  <th>Step</th>
+                  <th>Area</th>
+                  <th>Recommended Check</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- SUBTLE HIGH-TRUST PULL CARD -->
+        <div class="pull-card">
+          <div style="display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap;">
+            <div style="flex: 1 1 360px; min-width: 0;">
+              <strong style="font-size:0.95rem; display:block; margin-bottom:0.25rem;">
+                Build It In-House or Hand It Off, Completely Your Call
+              </strong>
+              <span style="font-size:0.86rem; color:var(--text-muted);">
+                Automating this internally? Use the plan above freely. Want VARINULL to turn this into a clean,
+                repeatable workflow (scoped to realistic 40-hr/week milestones based on your exports)? Export a Summary File (zero financial numbers or customer rows)
+                and email it to <a href="mailto:info@varinull.com?subject=Varinull%20Scout%20%2304%20Summary">info@varinull.com</a> whenever you want a hand.
+              </span>
+            </div>
+            <div class="btn-row">
+              <button type="button" id="exportSanitizedCapsuleBtn">↓ Export Summary File (.json)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      const BLANK_STEPS_CSV = "step_order,step_name,manual_minutes,is_copy_paste,error_prone,source_type\n";
+
+      const BLANK_RECON_CSV = "record_key,source_a_amount,source_b_amount,status_note\n";
+
+      const DEMO_PAYLOAD = {
+        prospect: {
+          company_name: "Vanguard Ops & Finance",
+          contact_name: "Elena Rostova, VP Finance & RevOps",
+          contact_email: "erostova@vanguard-ops-example.io",
+          industry: "finance",
+          team_size: "50-250"
+        },
+        inputs: {
+          workflow_name: "Weekly Close, Cloud Spend & SLA Compliance Pack",
+          runs_per_month: 4.33,
+          people_involved: 3,
+          exports_per_run: 6,
+          hours_per_run: 14.5,
+          hourly_rate_usd: 85,
+          source_formats: [
+            "csv_excel_exports",
+            "pdf_invoices_or_contracts",
+            "cloud_or_saas_billing"
+          ],
+          bottleneck_types: [
+            "manual_copy_paste_joins",
+            "reconciliation_mismatches",
+            "manual_summary_drafting",
+            "no_signoff_audit_trail"
+          ],
+          workflow_steps_csv_text: [
+            "step_order,step_name,manual_minutes,is_copy_paste,error_prone,source_type",
+            "1,Export & normalize NetSuite ERP + Stripe + Salesforce CSVs,180,true,true,csv_excel_exports",
+            "2,Ingest AWS + GCP + Snowflake billing exports & cost-center tags,150,true,true,cloud_or_saas_billing",
+            "3,Extract enterprise SLA credits & vendor PDF invoice terms,135,false,true,pdf_invoices_or_contracts",
+            "4,Cross-sheet VLOOKUP reconciliation & currency/tenant ID matching,210,true,true,csv_excel_exports",
+            "5,Draft weekly executive variance & SLA compliance narrative pack,120,false,true,manual_narrative",
+            "6,Controller & VP Finance exception review & sign-off,75,false,false,human_review"
+          ].join("\n"),
+          reconciliation_csv_text: [
+            "record_key,source_a_amount,source_b_amount,status_note",
+            "ACCT-ENT-1042,48250.00,48250.00,Matched",
+            "ACCT-ENT-1089,19400.00,18150.00,Unapplied SLA service credit ($1250 variance)",
+            "ACCT-ENT-1104,32780.50,32780.50,Matched",
+            "ACCT-ENT-1158,14920.00,,Missing in Stripe settlement CSV",
+            "ACCT-CLD-2011,27640.80,29110.25,AWS Marketplace untagged RI true-up mismatch",
+            "ACCT-CLD-2045,9850.00,9850.00,Matched",
+            "ACCT-SLA-3007,6500.00,5750.00,PDF addendum rebate omitted in Excel tracker",
+            "ACCT-SLA-3021,11200.00,11200.00,Matched"
+          ].join("\n")
+        }
+      };
+
+      const isHttpServer = window.location.protocol === "http:" || window.location.protocol === "https:";
+      const params = new URLSearchParams(window.location.search);
+      const isDemoMode = window.location.pathname.endsWith("/demo") || params.get("mode") === "demo";
+
+      let latestCapsule = null;
+      let latestLocalScan = null;
+
+      // Theme toggle
+      document.getElementById("themeToggleBtn").addEventListener("click", () => {
+        const html = document.documentElement;
+        html.setAttribute("data-theme", html.getAttribute("data-theme") === "dark" ? "light" : "dark");
+      });
+
+      // Configure mode links
+      const demoBanner = document.getElementById("demoBanner");
+      const modeSwitchLink = document.getElementById("modeSwitchLink");
+      const exitDemoLink = document.getElementById("exitDemoLink");
+      const trySampleFolderBtn = document.getElementById("trySampleFolderBtn");
+      if (isDemoMode) {
+        demoBanner.classList.add("active");
+        const prodHref = isHttpServer
+          ? (window.location.pathname.endsWith("/demo") ? "/" : window.location.pathname)
+          : "./client-assessment.html";
+        modeSwitchLink.style.display = "inline-flex";
+        modeSwitchLink.textContent = "Switch to Blank Workspace";
+        modeSwitchLink.href = prodHref;
+        exitDemoLink.href = prodHref;
+        trySampleFolderBtn.style.display = "inline-flex";
+      } else {
+        modeSwitchLink.style.display = "none";
+        trySampleFolderBtn.style.display = "none";
+      }
+
+      // Cadence & What-If Reduction synchronization
+      const cadencePreset = document.getElementById("cadencePreset");
+      const runsPerMonthEl = document.getElementById("runsPerMonth");
+      cadencePreset.addEventListener("change", () => {
+        if (cadencePreset.value !== "custom") {
+          runsPerMonthEl.value = cadencePreset.value;
+        }
+      });
+      runsPerMonthEl.addEventListener("input", () => {
+        const v = parseFloat(runsPerMonthEl.value);
+        if (Math.abs(v - 4.33) <= 0.03) cadencePreset.value = "4.33";
+        else if (Math.abs(v - 2.17) <= 0.03) cadencePreset.value = "2.17";
+        else if (Math.abs(v - 1.0) <= 0.01) cadencePreset.value = "1";
+        else if (Math.abs(v - 21.67) <= 0.06) cadencePreset.value = "21.67";
+        else cadencePreset.value = "custom";
+      });
+
+      const reductionPreset = document.getElementById("reductionPreset");
+      const targetReductionPctEl = document.getElementById("targetReductionPct");
+      reductionPreset.addEventListener("change", () => {
+        if (reductionPreset.value !== "custom") {
+          targetReductionPctEl.value = reductionPreset.value;
+        }
+      });
+      targetReductionPctEl.addEventListener("input", () => {
+        const v = Math.round(parseFloat(targetReductionPctEl.value));
+        if (v === 25) reductionPreset.value = "25";
+        else if (v === 50) reductionPreset.value = "50";
+        else if (v === 70) reductionPreset.value = "70";
+        else reductionPreset.value = "custom";
+      });
+
+      // CSV Parser helper
+      function parseCsvRows(text, delimiter = ",") {
+        const rows = [];
+        let cur = "";
+        let row = [];
+        let inQuotes = false;
+        for (let i = 0; i < text.length; i++) {
+          const ch = text[i];
+          const next = text[i + 1];
+          if (inQuotes) {
+            if (ch === '"' && next === '"') { cur += '"'; i++; }
+            else if (ch === '"') { inQuotes = false; }
+            else { cur += ch; }
+          } else {
+            if (ch === '"') inQuotes = true;
+            else if (ch === delimiter) { row.push(cur); cur = ""; }
+            else if (ch === "\n") { row.push(cur); rows.push(row); row = []; cur = ""; }
+            else if (ch === "\r") { /* skip */ }
+            else cur += ch;
+          }
+        }
+        if (cur.length > 0 || row.length > 0) {
+          row.push(cur);
+          rows.push(row);
+        }
+        return rows;
+      }
+
+      function safeFloat(val, fallback = 0) {
+        if (val === null || val === undefined) return fallback;
+        let s = String(val).trim();
+        if (!s) return fallback;
+        let cleaned = s.replace(/[$,%\s]/g, "");
+        if (cleaned.startsWith("(") && cleaned.endsWith(")")) {
+          cleaned = "-" + cleaned.slice(1, -1);
+        }
+        const n = parseFloat(cleaned);
+        return Number.isFinite(n) ? n : fallback;
+      }
+
+      function safeBool(val) {
+        if (typeof val === "boolean") return val;
+        return ["true", "1", "yes", "y", "checked"].includes(String(val || "").trim().toLowerCase());
+      }
+
+      function parseWorkflowStepsJS(csvText, targetReductionPct = 50) {
+        const trimmed = (csvText || "").trim();
+        if (!trimmed) return [];
+        const rows = parseCsvRows(trimmed);
+        if (rows.length < 2) return [];
+        const headers = rows[0].map(h => h.trim().toLowerCase());
+        const targetRatio = Math.max(0.10, Math.min(0.85, targetReductionPct / 100));
+        const steps = [];
+        for (let r = 1; r < rows.length; r++) {
+          const obj = {};
+          headers.forEach((h, i) => { obj[h] = (rows[r][i] || "").trim(); });
+          const stepName = obj.step_name || obj.step || obj.task || "";
+          const minutes = safeFloat(obj.manual_minutes || obj.minutes, 0);
+          if (!stepName && minutes <= 0) continue;
+          const isCopyPaste = safeBool(obj.is_copy_paste);
+          const errorProne = safeBool(obj.error_prone);
+          const sourceType = (obj.source_type || "csv_excel_exports").toLowerCase();
+          const order = Math.round(safeFloat(obj.step_order, r));
+
+          let compRate = targetRatio;
+          let pattern = "Pre-Calculated Summary Table + Human Review";
+          if (sourceType.includes("human_review") || (!isCopyPaste && !errorProne)) {
+            compRate = 0.0;
+            pattern = "Human Sign-Off Step (Time Kept)";
+          } else if (isCopyPaste && errorProne) {
+            compRate = targetRatio;
+            pattern = "Automated Import & ID Matching";
+          } else if (isCopyPaste && !errorProne) {
+            compRate = targetRatio;
+            pattern = "Automated File Formatting";
+          } else if (sourceType.includes("pdf") || sourceType.includes("doc") || sourceType.includes("contract")) {
+            compRate = targetRatio;
+            pattern = "Structured PDF Field Extraction + Check";
+          }
+
+          const savedMin = Math.round(minutes * compRate * 100) / 100;
+          const remMin = Math.round(Math.max(0, minutes - savedMin) * 100) / 100;
+          steps.push({
+            step_order: order,
+            step_name: stepName || ("Step " + order),
+            manual_minutes: Math.round(minutes * 10) / 10,
+            is_copy_paste: isCopyPaste,
+            error_prone: errorProne,
+            source_type: sourceType,
+            compression_rate: compRate,
+            saved_minutes: savedMin,
+            post_sprint_minutes: remMin,
+            automation_pattern: pattern
+          });
+        }
+        return steps;
+      }
+
+      function parseReconciliationJS(csvText) {
+        const empty = {
+          rows_checked: 0, matched_count: 0, mismatch_count: 0,
+          missing_in_a_count: 0, missing_in_b_count: 0, amount_variance_count: 0,
+          missing_key_count: 0, duplicate_key_count: 0, total_abs_variance_usd: 0, discrepancies: []
+        };
+        const trimmed = (csvText || "").trim();
+        if (!trimmed) return empty;
+        const rows = parseCsvRows(trimmed);
+        if (rows.length < 2) return empty;
+        const headers = rows[0].map(h => h.trim().toLowerCase());
+        const seen = new Set();
+
+        for (let r = 1; r < rows.length; r++) {
+          if (!rows[r].some(c => String(c || "").trim() !== "")) continue;
+          const obj = {};
+          headers.forEach((h, i) => { obj[h] = (rows[r][i] || "").trim(); });
+          empty.rows_checked++;
+          const recKey = obj.record_key || obj.id || obj.key || "";
+          const rawA = obj.source_a_amount || "";
+          const rawB = obj.source_b_amount || "";
+          const note = obj.status_note || "";
+
+          let dispKey = recKey;
+          if (!recKey) {
+            empty.missing_key_count++;
+            dispKey = `<BLANK_KEY_ROW_${r}>`;
+          } else if (seen.has(recKey)) {
+            empty.duplicate_key_count++;
+          } else {
+            seen.add(recKey);
+          }
+
+          const hasA = rawA !== "";
+          const hasB = rawB !== "";
+          const amtA = hasA ? safeFloat(rawA, 0) : 0;
+          const amtB = hasB ? safeFloat(rawB, 0) : 0;
+          const delta = Math.round((amtA - amtB) * 100) / 100;
+
+          if (!hasA && hasB) {
+            empty.mismatch_count++;
+            empty.missing_in_a_count++;
+            empty.total_abs_variance_usd += Math.abs(amtB);
+            empty.discrepancies.push({
+              record_key: dispKey, issue: "MISSING_IN_SOURCE_A",
+              source_a_amount: null, source_b_amount: amtB, delta_usd: -amtB,
+              status_note: note || "Present in Source B only"
+            });
+          } else if (hasA && !hasB) {
+            empty.mismatch_count++;
+            empty.missing_in_b_count++;
+            empty.total_abs_variance_usd += Math.abs(amtA);
+            empty.discrepancies.push({
+              record_key: dispKey, issue: "MISSING_IN_SOURCE_B",
+              source_a_amount: amtA, source_b_amount: null, delta_usd: amtA,
+              status_note: note || "Present in Source A only"
+            });
+          } else if (Math.abs(delta) > 0.01) {
+            empty.mismatch_count++;
+            empty.amount_variance_count++;
+            empty.total_abs_variance_usd += Math.abs(delta);
+            empty.discrepancies.push({
+              record_key: dispKey, issue: "AMOUNT_VARIANCE",
+              source_a_amount: amtA, source_b_amount: amtB, delta_usd: delta,
+              status_note: note || `Unreconciled delta of $${Math.abs(delta).toFixed(2)}`
+            });
+          } else {
+            empty.matched_count++;
+          }
+        }
+        empty.total_abs_variance_usd = Math.round(empty.total_abs_variance_usd * 100) / 100;
+        empty.discrepancies = empty.discrepancies.slice(0, 25);
+        return empty;
+      }
+
+      // Deterministic JS Evaluator matching engine.py 1-to-1
+      function evaluateIntakeJS(payload, mode) {
+        const p = payload.prospect || {};
+        const inp = payload.inputs || {};
+        const modeClean = mode === "demo" ? "demo" : "production";
+
+        const prospect = {
+          company_name: String(p.company_name || "").trim(),
+          contact_name: String(p.contact_name || "").trim(),
+          contact_email: String(p.contact_email || "").trim(),
+          industry: String(p.industry || "general").trim() || "general",
+          team_size: String(p.team_size || "50-250").trim() || "50-250"
+        };
+
+        const workflowName = String(inp.workflow_name || "Recurring Reporting & Reconciliation Workflow").trim();
+        const runsPerMonth = Math.max(0.25, safeFloat(inp.runs_per_month, 4.0));
+        const hoursPerRun = Math.max(0.25, safeFloat(inp.hours_per_run, 8.0));
+        const hourlyRateUsd = Math.max(15, safeFloat(inp.hourly_rate_usd, 85.0));
+        const peopleInvolved = Math.max(1, Math.round(safeFloat(inp.people_involved, 2)));
+        const exportsPerRun = Math.max(1, Math.round(safeFloat(inp.exports_per_run, 3)));
+        const sourceFormats = Array.isArray(inp.source_formats) ? inp.source_formats : [];
+        const bottleneckTypes = Array.isArray(inp.bottleneck_types) ? inp.bottleneck_types : [];
+        const stepsCsv = String(inp.workflow_steps_csv_text || "");
+        const reconCsv = String(inp.reconciliation_csv_text || "");
+        const localScan = inp.local_scan_summary || null;
+
+        const targetReductionPct = Math.round(Math.max(10, Math.min(85, safeFloat(inp.target_reduction_pct, 50))));
+        const steps = parseWorkflowStepsJS(stepsCsv, targetReductionPct);
+        const recon = parseReconciliationJS(reconCsv);
+
+        const compressionPct = targetReductionPct;
+        const compressionRatio = compressionPct / 100.0;
+
+        let runsPerYear = runsPerMonth * 12.0;
+        if (Math.abs(runsPerMonth - 4.33) <= 0.03) runsPerYear = 52.0;
+        else if (Math.abs(runsPerMonth - 2.17) <= 0.03) runsPerYear = 26.0;
+        else if (Math.abs(runsPerMonth - 21.67) <= 0.06) runsPerYear = 260.0;
+
+        const currentAnnualHours = Math.floor(hoursPerRun * runsPerYear * 10 + 0.5) / 10;
+        const currentAnnualCost = Math.round(currentAnnualHours * hourlyRateUsd);
+        const exactReclaimed = currentAnnualHours * compressionRatio;
+        const annualHoursReclaimed = Math.floor(exactReclaimed + 0.5);
+        const postSprintHours = Math.floor(hoursPerRun * (1 - compressionRatio) * 10 + 0.5) / 10;
+        const annualSavingsUsd = Math.floor(exactReclaimed * hourlyRateUsd + 0.5);
+
+        let savingsPts = 5;
+        if (currentAnnualCost >= 75000) savingsPts = 35;
+        else if (currentAnnualCost >= 45000) savingsPts = 30;
+        else if (currentAnnualCost >= 25000) savingsPts = 24;
+        else if (currentAnnualCost >= 12000) savingsPts = 17;
+        else if (currentAnnualCost >= 5000) savingsPts = 10;
+
+        const compPts = Math.min(20, bottleneckTypes.length * 5);
+        const complexityPts = Math.min(16, sourceFormats.length * 5) + Math.min(10, exportsPerRun * 2);
+
+        let evidencePts = 0;
+        const scanTotals = (localScan && localScan.totals) ? localScan.totals : {};
+        if (steps.length >= 2 || (scanTotals.total_files || 0) >= 2) evidencePts += 4;
+        const localOrphans = scanTotals.join_orphan_keys_detected || 0;
+        const localDups = scanTotals.total_duplicate_keys || 0;
+        const xlsxLookups = scanTotals.total_lookup_formulas || 0;
+
+        if (recon.mismatch_count >= 3 || localOrphans >= 3) evidencePts += 7;
+        else if (recon.mismatch_count >= 1 || localOrphans >= 1 || localDups >= 1 || xlsxLookups >= 3) evidencePts += 4;
+        else if (bottleneckTypes.includes("reconciliation_mismatches")) evidencePts += 3;
+
+        const headlineScore = Math.max(15, Math.min(98, savingsPts + compPts + complexityPts + evidencePts));
+
+        let severityTier = "LOW";
+        let tierPrefix = "Light Reporting Cleanup";
+        if (headlineScore >= 88) { severityTier = "CRITICAL"; tierPrefix = "High-Volume Manual Bottleneck"; }
+        else if (headlineScore >= 70) { severityTier = "HIGH"; tierPrefix = "Strong Automation Candidate"; }
+        else if (headlineScore >= 45) { severityTier = "MEDIUM"; tierPrefix = "Moderate Automation Candidate"; }
+
+        const hasPdfFmt = sourceFormats.includes("pdf_invoices_or_contracts");
+        let sprintDays = "1-2 Weeks · ~40-80 hrs (at 40 hrs/wk)";
+        if (headlineScore >= 82 || exportsPerRun >= 6 || (sourceFormats.length >= 3 && hasPdfFmt)) {
+          sprintDays = "5-7 Weeks (Phased) · Phase 1: 1-Week Discovery · Phase 2: 4-6 Weeks (~160-240 hrs at 40 hrs/wk)";
+        } else if (headlineScore >= 62 || exportsPerRun >= 4 || hasPdfFmt) {
+          sprintDays = "3-5 Weeks · ~120-200 hrs (at 40 hrs/wk)";
+        } else if (headlineScore >= 40) {
+          sprintDays = "2-3 Weeks · ~80-120 hrs (at 40 hrs/wk)";
+        }
+        const paybackLabel = sprintDays;
+
+        const scoreLabel = `${tierPrefix} (${headlineScore}/100 Checklist Score · Current Time Cost: $${currentAnnualCost.toLocaleString()}/yr)`;
+
+        const findings = [];
+        const cpMin = steps.filter(s => s.is_copy_paste).reduce((a, s) => a + s.manual_minutes, 0);
+        if (bottleneckTypes.includes("manual_copy_paste_joins") || cpMin > 0 || sourceFormats.includes("csv_excel_exports") || xlsxLookups > 0) {
+          const lookupNote = xlsxLookups > 0 ? ` Detected ${xlsxLookups} spreadsheet lookup/conditional formula(s) (\`VLOOKUP\`/\`XLOOKUP\`/\`SUMIFS\`) in workbook inspection.` : "";
+          const stepNote = cpMin > 0 ? ` (${Math.round((cpMin / 60) * 10) / 10} hrs/run spent directly in copy-paste steps)` : "";
+          findings.push({
+            id: `RC-0${findings.length + 1}`,
+            severity: "HIGH",
+            title: "Manual Spreadsheet Copy-Pasting & VLOOKUP Bottleneck",
+            detail: `Based on your inputs, your team spends ${hoursPerRun} hrs/run${stepNote} assembling data across recurring exports (${currentAnnualHours} hrs/yr, or $${currentAnnualCost.toLocaleString()}/yr at $${hourlyRateUsd}/hr).${lookupNote} At a ${compressionPct}% what-if reduction target, that represents ~${annualHoursReclaimed} hrs/yr (~$${annualSavingsUsd.toLocaleString()}/yr) of manual prep.`,
+            client_next_step: "Lock standard export column names up front and replace spreadsheet VLOOKUP chains with an automated join step that alerts you immediately if columns are missing or IDs are duplicated."
+          });
+        }
+        if (recon.mismatch_count > 0 || bottleneckTypes.includes("reconciliation_mismatches") || localOrphans > 0) {
+          let rDetail = "Mismatched IDs, timing cutoffs, and missing credits between systems require manual line-by-line hunting every cycle.";
+          if (recon.rows_checked > 0) {
+            rDetail = `Your uploaded sample CSV showed ${recon.mismatch_count} mismatch(es) across ${recon.rows_checked} rows ($${recon.total_abs_variance_usd.toLocaleString(undefined, {minimumFractionDigits:2})} total difference).`;
+          } else if (localOrphans > 0) {
+            rDetail = `Your local folder scan found ${localOrphans} unmatched ID(s) and ${localDups} duplicate ID(s) across export files, requiring manual row-by-row hunting.`;
+          }
+          findings.push({
+            id: `RC-0${findings.length + 1}`,
+            severity: (recon.mismatch_count >= 2 || localOrphans >= 2) ? "HIGH" : "MEDIUM",
+            title: "Numbers & IDs Don't Match Cleanly Between Systems",
+            detail: rDetail,
+            client_next_step: "Set up an automated System A vs. System B comparison step that groups exact matches, rounding differences, missing rows, and true variances before totals are finalized."
+          });
+        }
+        if (sourceFormats.includes("pdf_invoices_or_contracts") || steps.some(s => s.source_type.includes("pdf"))) {
+          const pdfPages = scanTotals.total_pdf_pages_est || 0;
+          const pdfNote = pdfPages > 0 ? ` (~${pdfPages} PDF pages counted in your folder scan)` : "";
+          findings.push({
+            id: `RC-0${findings.length + 1}`,
+            severity: "MEDIUM",
+            title: "Manual Copying From PDF Invoices, Contracts, or Statements",
+            detail: `Important totals, rebates, or billing terms sit inside PDFs${pdfNote}, leading to re-typing mistakes or missed adjustments in Excel trackers.`,
+            client_next_step: "Extract PDF line items into structured fields with page references and an automatic math check that confirms line items add up to the invoice total."
+          });
+        }
+        if (sourceFormats.includes("cloud_or_saas_billing")) {
+          findings.push({
+            id: `RC-0${findings.length + 1}`,
+            severity: "MEDIUM",
+            title: "Inconsistent Cloud or Software Billing Exports",
+            detail: "Different cloud and software billing exports use different account, department, or cost-center labels, causing repetitive cleanup work each cycle.",
+            client_next_step: "Map vendor billing exports into one consistent table with clear fallback rules for untagged charges."
+          });
+        }
+        if (bottleneckTypes.includes("manual_summary_drafting")) {
+          findings.push({
+            id: `RC-0${findings.length + 1}`,
+            severity: "MEDIUM",
+            title: "Re-Writing Recurring Summary Notes by Hand",
+            detail: "Staff rewrite recurring weekly or monthly commentary from scratch, and pasting raw spreadsheets into generic AI chat tools risks wrong numbers.",
+            client_next_step: "Draft summary notes strictly from pre-calculated totals, paired with an automatic check that confirms every number in the text matches the table."
+          });
+        }
+        if (bottleneckTypes.includes("no_signoff_audit_trail") || recon.mismatch_count > 0) {
+          findings.push({
+            id: `RC-0${findings.length + 1}`,
+            severity: "HIGH",
+            title: "No Clear Record of Who Checked & Approved Adjustments",
+            detail: "Last-minute spreadsheet edits and Slack approvals leave no clear log of who verified each mismatch before reports go out.",
+            client_next_step: "Keep every calculated total and adjustment in a 'Needs Human Sign-Off' step until a reviewer approves or notes a correction."
+          });
+        }
+        const schemaWarnCount = scanTotals.schema_drift_warnings || 0;
+        if (bottleneckTypes.includes("schema_drift_or_dirty_exports") || recon.missing_key_count > 0 || recon.duplicate_key_count > 0 || schemaWarnCount > 0) {
+          findings.push({
+            id: `RC-0${findings.length + 1}`,
+            severity: "MEDIUM",
+            title: "Shifting Column Names, Blank IDs, or Duplicate Rows",
+            detail: `Found ${schemaWarnCount} column-mismatch warning(s), ${recon.missing_key_count} blank ID(s), and ${recon.duplicate_key_count + localDups} duplicate ID(s).`,
+            client_next_step: "Check required column names, non-blank unique IDs, and date formats automatically before running report calculations."
+          });
+        }
+        if (findings.length === 0) {
+          findings.push({
+            id: "RC-01",
+            severity: "MEDIUM",
+            title: "Recurring Report Time-Saving Opportunity",
+            detail: `Based on your inputs, this report takes ${currentAnnualHours} hrs/yr ($${currentAnnualCost.toLocaleString()}/yr); at your ${compressionPct}% what-if target, automating imports saves ~${annualHoursReclaimed} hrs/yr.`,
+            client_next_step: "Standardize input CSV columns and automate recurring roll-ups behind a simple human sign-off step."
+          });
+        }
+
+        const checklist = [
+          {
+            step: 1,
+            category: "Consistent Input Columns",
+            item: "Agree on standard column names, unique record IDs, and date/currency formats across all recurring export files.",
+            status: "ACTION_REQUIRED"
+          },
+          {
+            step: 2,
+            category: "Automatic File Matching",
+            item: "Replace manual VLOOKUPs and copy-pasting with an automated System A vs. System B match that flags missing or mismatched rows.",
+            status: (bottleneckTypes.includes("manual_copy_paste_joins") || bottleneckTypes.includes("reconciliation_mismatches") || recon.mismatch_count > 0) ? "ACTION_REQUIRED" : "RECOMMENDED"
+          },
+          {
+            step: 3,
+            category: "PDF & Summary Fact-Check",
+            item: "Verify any numbers pulled from PDFs or included in draft summary notes against the underlying table totals.",
+            status: (sourceFormats.includes("pdf_invoices_or_contracts") || bottleneckTypes.includes("manual_summary_drafting")) ? "ACTION_REQUIRED" : "RECOMMENDED"
+          },
+          {
+            step: 4,
+            category: "Human Sign-Off Step",
+            item: "Keep every final total and mismatch adjustment in a 'Needs Human Sign-Off' state until a reviewer approves it.",
+            status: "ACTION_REQUIRED"
+          },
+          {
+            step: 5,
+            category: "Side-by-Side Comparison",
+            item: "Run the automated workflow alongside 1–2 past reporting cycles to verify numbers match before retiring manual spreadsheets.",
+            status: "ACTION_REQUIRED"
+          }
+        ];
+
+        const signals = [];
+        const addSig = (s) => { if (!signals.includes(s)) signals.push(s); };
+        if (sourceFormats.includes("csv_excel_exports") || bottleneckTypes.includes("manual_copy_paste_joins") || bottleneckTypes.includes("reconciliation_mismatches") || recon.mismatch_count > 0 || steps.some(s => s.is_copy_paste)) {
+          addSig("manual_csv_reconciliation_bottleneck");
+        }
+        if (sourceFormats.includes("pdf_invoices_or_contracts") || steps.some(s => s.source_type.includes("pdf"))) {
+          addSig("unstructured_pdf_or_doc_intake");
+        }
+        if (sourceFormats.includes("cloud_or_saas_billing") || sourceFormats.includes("multi_cloud_telemetry")) {
+          addSig("multi_cloud_config_or_telemetry_sprawl");
+        }
+        if (bottleneckTypes.includes("manual_summary_drafting")) {
+          addSig("hallucination_or_ungrounded_output");
+        }
+        if (bottleneckTypes.includes("no_signoff_audit_trail") || recon.mismatch_count > 0 || steps.some(s => s.error_prone)) {
+          addSig("missing_observability_or_hitl");
+        }
+        if (bottleneckTypes.includes("schema_drift_or_dirty_exports") || recon.missing_key_count > 0 || recon.duplicate_key_count > 0 || (scanTotals.schema_drift_warnings || 0) > 0) {
+          addSig("broken_rag_schema_or_data_hygiene");
+        }
+        if (bottleneckTypes.includes("no_signoff_audit_trail") && ["healthcare", "banking", "insurance", "regulated"].includes(prospect.industry.toLowerCase())) {
+          addSig("audit_logging_or_retention_gap");
+        }
+        if (signals.length === 0) addSig("manual_csv_reconciliation_bottleneck");
+
+        const inputsOut = {
+          workflow_name: workflowName,
+          runs_per_month: runsPerMonth,
+          people_involved: peopleInvolved,
+          exports_per_run: exportsPerRun,
+          hours_per_run: hoursPerRun,
+          hourly_rate_usd: hourlyRateUsd,
+          target_reduction_pct: compressionPct,
+          source_formats: sourceFormats,
+          bottleneck_types: bottleneckTypes,
+          workflow_steps_csv_text: stepsCsv,
+          reconciliation_csv_text: reconCsv
+        };
+        if (localScan) inputsOut.local_scan_summary = localScan;
+
+        return {
+          capsule_version: "1.0",
+          niche_id: 4,
+          niche_slug: "sprint-4-report-compression",
+          niche_title: "Reporting & Data-Prep Bottleneck Compression (Typically 2-3 Weeks)",
+          mode: modeClean,
+          generated_at: new Date().toISOString().replace(/\.\d{3}Z$/, "Z"),
+          prospect: prospect,
+          inputs: inputsOut,
+          client_assessment: {
+            headline_score: headlineScore,
+            score_label: scoreLabel,
+            severity_tier: severityTier,
+            estimated_sprint_days: sprintDays,
+            key_metrics: [
+              { label: "Current Annual Time", value: `${currentAnnualHours.toFixed(1)} hrs/yr` },
+              { label: "Current Annual Time Cost", value: `$${currentAnnualCost.toLocaleString()} / yr` },
+              { label: `What-If Hours Saved (${compressionPct}%)`, value: `~${annualHoursReclaimed} hrs/yr` },
+              { label: `What-If Cost Saved (${compressionPct}%)`, value: `~$${annualSavingsUsd.toLocaleString()} / yr` },
+              { label: "Estimated Effort", value: sprintDays }
+            ],
+            roi_breakdown: {
+              runs_per_year: Math.round(runsPerYear * 10) / 10,
+              current_annual_hours: currentAnnualHours,
+              current_annual_cost_usd: currentAnnualCost,
+              compression_pct: compressionPct,
+              annual_hours_reclaimed: annualHoursReclaimed,
+              post_sprint_hours_per_run: postSprintHours,
+              annual_savings_usd: annualSavingsUsd,
+              payback_period: paybackLabel,
+              reconciliation_summary: recon,
+              step_breakdown: steps
+            },
+            top_findings: findings.slice(0, 6),
+            safe_to_deploy_checklist: checklist
+          },
+          routing_signals: signals
+        };
+      }
+
+      function sanitizeCapsuleJS(capsule) {
+        const cloned = JSON.parse(JSON.stringify(capsule));
+        const inp = cloned.inputs || {};
+        inp.reconciliation_csv_text = "";
+        if (inp.workflow_steps_csv_text) {
+          const steps = parseWorkflowStepsJS(inp.workflow_steps_csv_text);
+          const lines = ["step_order,step_name,manual_minutes,is_copy_paste,error_prone,source_type"];
+          steps.forEach(s => {
+            lines.push(`${s.step_order},Step_${s.step_order}_${s.source_type},${s.manual_minutes},${s.is_copy_paste},${s.error_prone},${s.source_type}`);
+          });
+          inp.workflow_steps_csv_text = lines.join("\n");
+        }
+        if (inp.local_scan_summary) {
+          inp.local_scan_summary.scanned_path = "<REDACTED_LOCAL_PATH>";
+          (inp.local_scan_summary.files || []).forEach((f, idx) => {
+            f.file = `source_${idx + 1}.${String(f.type || "dat").toLowerCase()}`;
+          });
+        }
+        if (cloned.client_assessment && cloned.client_assessment.roi_breakdown && cloned.client_assessment.roi_breakdown.reconciliation_summary) {
+          cloned.client_assessment.roi_breakdown.reconciliation_summary.discrepancies = [];
+          cloned.client_assessment.roi_breakdown.reconciliation_summary.total_abs_variance_usd = 0.0;
+        }
+        cloned.sanitized_structural_only = true;
+        return cloned;
+      }
+
+      function renderMarkdownSpecJS(capsule) {
+        const ca = capsule.client_assessment || {};
+        const inp = capsule.inputs || {};
+        const roi = ca.roi_breakdown || {};
+        const steps = roi.step_breakdown || [];
+        const org = (capsule.prospect && capsule.prospect.company_name) || "Local Workspace Assessment";
+        const lines = [
+          `# ${inp.workflow_name}, Time & Automation Plan`,
+          "",
+          `- **Organization / Workspace:** ${org}`,
+          `- **Generated At:** \`${capsule.generated_at}\` (\`mode=${capsule.mode}\`)`,
+          `- **Summary:** **${ca.score_label}**`,
+          `- **Typical Scope:** \`${ca.estimated_sprint_days}\``,
+          "",
+          "## 1. Current Time Cost & What-If Savings Summary",
+          "",
+          "| Metric | Baseline / What-If Projection |",
+          "| :--- | :--- |",
+          `| Current Effort per Run (Your Input) | \`${inp.hours_per_run} hrs/run\` (${inp.runs_per_month} runs/mo) |`,
+          `| Current Annual Time & Cost (Exact Math) | \`${roi.current_annual_hours} hrs/yr\` (\`$${(roi.current_annual_cost_usd || 0).toLocaleString()}/yr\` @ \`$${inp.hourly_rate_usd}/hr\`) |`,
+          `| Selected What-If Reduction Target | **\`${roi.compression_pct}%\`** (illustrative target: \`~${roi.post_sprint_hours_per_run} hrs/run\`) |`,
+          `| **What-If Annual Hours Saved** | **\`~${roi.annual_hours_reclaimed} hrs/yr\`** |`,
+          `| **What-If Annual Cost Saved** | **\`~$${(roi.annual_savings_usd || 0).toLocaleString()} / yr\`** |`,
+          ""
+        ];
+        if (steps.length > 0) {
+          lines.push("## 2. Step-by-Step Time Breakdown (Using Your What-If %)", "", "| # | Workflow Step | Current (min) | What-If Target (min) | Suggested Handling |", "| :--- | :--- | ---: | ---: | :--- |");
+          steps.forEach(s => {
+            lines.push(`| ${s.step_order} | ${s.step_name} | ${s.manual_minutes} | ${s.post_sprint_minutes} | ${s.automation_pattern} |`);
+          });
+          lines.push("");
+        }
+        lines.push("## Key Bottlenecks & Practical Next Steps", "");
+        (ca.top_findings || []).forEach(f => {
+          lines.push(`### [${f.id}] (${f.severity}) ${f.title}`, `- **Observation:** ${f.detail}`, `- **Recommended Next Step:** ${f.client_next_step}`, "");
+        });
+        lines.push("## Step-by-Step Automation & Human Sign-Off Checklist", "", "| Step | Area | Recommended Check | Status |", "| :--- | :--- | :--- | :--- |");
+        (ca.safe_to_deploy_checklist || []).forEach(c => {
+          lines.push(`| ${c.step} | **${c.category}** | ${c.item} | \`${c.status}\` |`);
+        });
+        lines.push("", "---", "> **Next Steps (100% Optional):** Automating this internally? Use the plan above freely with your team. Want VARINULL to turn this into a clean, repeatable workflow (typically 2-3 weeks, scoped upfront)? Export a Summary File (zero financial numbers or customer rows) whenever you want a hand.", "");
+        return lines.join("\n");
+      }
+
+      function escapeHtml(str) {
+        return String(str ?? "")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+      }
+
+      function renderCapsuleUI(capsule, sourceLabel) {
+        latestCapsule = capsule;
+        const ca = capsule.client_assessment || {};
+        const roi = ca.roi_breakdown || {};
+        const inp = capsule.inputs || {};
+
+        const badge = document.getElementById("resSeverityBadge");
+        badge.textContent = ca.severity_tier || "HIGH";
+        badge.className = "badge " + (ca.severity_tier || "HIGH");
+
+        const effortHead = String(ca.estimated_sprint_days || "Scoped Upfront").split(" · ")[0];
+        document.getElementById("resSprintWindowPill").textContent = `Estimated Effort: ${effortHead}`;
+        document.getElementById("resScoreLabel").textContent = ca.score_label || "";
+        document.getElementById("resBaselineSub").textContent =
+          `Current manual time (from your inputs): ${roi.current_annual_hours} hrs/yr ($${(roi.current_annual_cost_usd || 0).toLocaleString()}/yr across ${inp.people_involved || 1} people) -> At your ${roi.compression_pct || 50}% what-if target: ~${roi.post_sprint_hours_per_run} hrs/run remaining.`;
+
+        const grid = document.getElementById("resKeyMetricsGrid");
+        grid.innerHTML = (ca.key_metrics || []).map(m => {
+          const parts = String(m.value ?? "").split(" · ");
+          const head = parts[0] || "";
+          const subs = parts.slice(1);
+          const isText = subs.length > 0 || (head.length > 14 && !head.startsWith("$") && !head.startsWith("~"));
+          return `
+          <div class="metric-card">
+            <div class="metric-label">${escapeHtml(m.label)}</div>
+            <div class="metric-value${isText ? " is-text" : ""}">${escapeHtml(head)}</div>
+            ${subs.length ? `<div class="metric-sub">${subs.map(s => `<div>${escapeHtml(s)}</div>`).join("")}</div>` : ""}
+          </div>
+          `;
+        }).join("");
+
+        const pct = roi.compression_pct || 50;
+        document.getElementById("barLeftLabel").innerHTML = `<strong>What-If Automated Prep (${pct}% target):</strong> ~${roi.annual_hours_reclaimed} hrs/yr`;
+        document.getElementById("barRightLabel").innerHTML = `<strong>Remaining Manual &amp; Sign-Off Time:</strong> ~${roi.post_sprint_hours_per_run} hrs/run`;
+        document.getElementById("barReclaimedFill").style.width = `${pct}%`;
+        document.getElementById("barHumanFill").style.width = `${Math.max(5, 100 - pct)}%`;
+
+        // Steps table
+        const steps = roi.step_breakdown || [];
+        const stepWrap = document.getElementById("stepBreakdownWrap");
+        const stepBody = document.querySelector("#stepBreakdownTable tbody");
+        if (steps.length > 0) {
+          stepWrap.style.display = "block";
+          stepBody.innerHTML = steps.map(s => `
+            <tr>
+              <td class="mono">${s.step_order}</td>
+              <td>${escapeHtml(s.step_name)}</td>
+              <td class="mono">${s.manual_minutes}</td>
+              <td class="mono">${s.post_sprint_minutes}</td>
+              <td><span class="pill">${escapeHtml(s.automation_pattern)}</span></td>
+            </tr>
+          `).join("");
+        } else {
+          stepWrap.style.display = "none";
+        }
+
+        // Recon table
+        const recon = roi.reconciliation_summary || {};
+        const reconWrap = document.getElementById("reconWrap");
+        const reconBody = document.querySelector("#reconTable tbody");
+        if ((recon.rows_checked || 0) > 0) {
+          reconWrap.style.display = "block";
+          document.getElementById("reconSummaryLine").textContent =
+            `Checked ${recon.rows_checked} sample records: ${recon.matched_count} exact matches, ${recon.mismatch_count} discrepancies ($${(recon.total_abs_variance_usd || 0).toLocaleString(undefined, {minimumFractionDigits:2})} cumulative absolute variance).`;
+          reconBody.innerHTML = (recon.discrepancies || []).map(d => `
+            <tr>
+              <td class="mono">${escapeHtml(d.record_key)}</td>
+              <td><span class="badge HIGH">${escapeHtml(d.issue)}</span></td>
+              <td class="mono">${d.source_a_amount !== null && d.source_a_amount !== undefined ? "$" + Number(d.source_a_amount).toLocaleString(undefined, {minimumFractionDigits:2}) : "<em>missing</em>"}</td>
+              <td class="mono">${d.source_b_amount !== null && d.source_b_amount !== undefined ? "$" + Number(d.source_b_amount).toLocaleString(undefined, {minimumFractionDigits:2}) : "<em>missing</em>"}</td>
+              <td class="mono">$${Number(d.delta_usd || 0).toLocaleString(undefined, {minimumFractionDigits:2})}</td>
+              <td>${escapeHtml(d.status_note)}</td>
+            </tr>
+          `).join("");
+        } else {
+          reconWrap.style.display = "none";
+        }
+
+        // Findings
+        const fList = document.getElementById("findingsList");
+        fList.innerHTML = (ca.top_findings || []).map(f => `
+          <div class="finding-item">
+            <div class="finding-head">
+              <span class="badge ${escapeHtml(f.severity)}">${escapeHtml(f.id)} · ${escapeHtml(f.severity)}</span>
+              <strong>${escapeHtml(f.title)}</strong>
+            </div>
+            <div style="font-size:0.86rem; margin-bottom:0.35rem;">${escapeHtml(f.detail)}</div>
+            <div style="font-size:0.82rem; color:var(--text-muted);"><strong>Engineering Fix:</strong> ${escapeHtml(f.client_next_step)}</div>
+          </div>
+        `).join("");
+
+        // Checklist
+        const clBody = document.querySelector("#checklistTable tbody");
+        clBody.innerHTML = (ca.safe_to_deploy_checklist || []).map(c => `
+          <tr>
+            <td class="mono">${c.step}</td>
+            <td><strong>${escapeHtml(c.category)}</strong></td>
+            <td>${escapeHtml(c.item)}</td>
+            <td><span class="badge ${escapeHtml(c.status)}">${escapeHtml(c.status)}</span></td>
+          </tr>
+        `).join("");
+
+        document.getElementById("engineStatusNote").textContent = sourceLabel;
+        const sec = document.getElementById("resultsSection");
+        sec.classList.add("visible");
+      }
+
+      function populateForm(payload) {
+        const p = payload.prospect || {};
+        const inp = payload.inputs || {};
+        document.getElementById("workflowName").value = inp.workflow_name || "";
+        const rpm = inp.runs_per_month !== undefined ? inp.runs_per_month : 1;
+        runsPerMonthEl.value = rpm;
+        runsPerMonthEl.dispatchEvent(new Event("input"));
+        document.getElementById("peopleInvolved").value = inp.people_involved || 2;
+        document.getElementById("exportsPerRun").value = inp.exports_per_run || 3;
+        document.getElementById("hoursPerRun").value = inp.hours_per_run || 6;
+        document.getElementById("hourlyRateUsd").value = inp.hourly_rate_usd || 85;
+        targetReductionPctEl.value = inp.target_reduction_pct !== undefined ? inp.target_reduction_pct : 50;
+        targetReductionPctEl.dispatchEvent(new Event("input"));
+
+        const sfSet = new Set(inp.source_formats || []);
+        document.querySelectorAll('input[name="source_formats"]').forEach(cb => { cb.checked = sfSet.has(cb.value); });
+
+        const btSet = new Set(inp.bottleneck_types || []);
+        document.querySelectorAll('input[name="bottleneck_types"]').forEach(cb => { cb.checked = btSet.has(cb.value); });
+
+        document.getElementById("workflowStepsCsv").value = inp.workflow_steps_csv_text || "";
+        document.getElementById("reconciliationCsv").value = inp.reconciliation_csv_text || "";
+        if (inp.workflow_steps_csv_text || inp.reconciliation_csv_text) {
+          document.getElementById("empiricalCsvDetails").open = true;
+        }
+
+        document.getElementById("companyName").value = p.company_name || "";
+        document.getElementById("contactName").value = p.contact_name || "";
+        document.getElementById("contactEmail").value = p.contact_email || "";
+        document.getElementById("industrySelect").value = p.industry || "general";
+        document.getElementById("teamSizeSelect").value = p.team_size || "50-250";
+      }
+
+      function collectPayloadFromForm() {
+        const sourceFormats = Array.from(document.querySelectorAll('input[name="source_formats"]:checked')).map(el => el.value);
+        const bottleneckTypes = Array.from(document.querySelectorAll('input[name="bottleneck_types"]:checked')).map(el => el.value);
+        const inputs = {
+          workflow_name: document.getElementById("workflowName").value.trim() || "Recurring Reporting & Reconciliation Workflow",
+          runs_per_month: safeFloat(runsPerMonthEl.value, 1),
+          people_involved: Math.max(1, Math.round(safeFloat(document.getElementById("peopleInvolved").value, 2))),
+          exports_per_run: Math.max(1, Math.round(safeFloat(document.getElementById("exportsPerRun").value, 3))),
+          hours_per_run: safeFloat(document.getElementById("hoursPerRun").value, 6),
+          hourly_rate_usd: safeFloat(document.getElementById("hourlyRateUsd").value, 85),
+          target_reduction_pct: Math.round(Math.max(10, Math.min(85, safeFloat(targetReductionPctEl.value, 50)))),
+          source_formats: sourceFormats,
+          bottleneck_types: bottleneckTypes,
+          workflow_steps_csv_text: document.getElementById("workflowStepsCsv").value,
+          reconciliation_csv_text: document.getElementById("reconciliationCsv").value
+        };
+        if (latestLocalScan) {
+          inputs.local_scan_summary = latestLocalScan;
+        }
+        return {
+          mode: isDemoMode ? "demo" : "production",
+          prospect: {
+            company_name: document.getElementById("companyName").value.trim(),
+            contact_name: document.getElementById("contactName").value.trim(),
+            contact_email: document.getElementById("contactEmail").value.trim(),
+            industry: document.getElementById("industrySelect").value,
+            team_size: document.getElementById("teamSizeSelect").value
+          },
+          inputs
+        };
+      }
+
+      async function runAssessment(payload) {
+        const activeMode = isDemoMode ? "demo" : "production";
+        if (isHttpServer) {
+          try {
+            const resp = await fetch("/api/assess", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ ...payload, mode: activeMode })
+            });
+            if (resp.ok) {
+              const serverCap = await resp.json();
+              const note = activeMode === "demo"
+                ? "Evaluated via local FastAPI engine (Demo mode, not stored in production DB)"
+                : "Evaluated via local FastAPI engine & saved to local workspace history";
+              renderCapsuleUI(serverCap, note);
+              return;
+            }
+          } catch (_) { /* fallback to offline JS */ }
+        }
+        const localCap = evaluateIntakeJS(payload, activeMode);
+        renderCapsuleUI(localCap, "Evaluated 100% offline in browser (Zero network calls)");
+      }
+
+      document.getElementById("assessmentForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        runAssessment(collectPayloadFromForm());
+      });
+
+      document.getElementById("resetBlankBtn").addEventListener("click", () => {
+        latestLocalScan = null;
+        document.getElementById("scanResultsBox").classList.remove("visible");
+        document.getElementById("resultsSection").classList.remove("visible");
+        populateForm({
+          prospect: { industry: "general", team_size: "50-250" },
+          inputs: {
+            workflow_name: "",
+            runs_per_month: 1,
+            people_involved: 2,
+            exports_per_run: 3,
+            hours_per_run: 6,
+            hourly_rate_usd: 85,
+            source_formats: [],
+            bottleneck_types: [],
+            workflow_steps_csv_text: "",
+            reconciliation_csv_text: ""
+          }
+        });
+      });
+
+      // Download helpers
+      function triggerBlobDownload(filename, content, mime = "text/plain;charset=utf-8") {
+        const blob = new Blob([content], { type: mime });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+      }
+
+      document.getElementById("downloadBlankStepsBtn").addEventListener("click", () => {
+        if (isHttpServer) { window.location.href = "/api/templates/blank_workflow_steps.csv"; return; }
+        triggerBlobDownload("blank_workflow_steps.csv", BLANK_STEPS_CSV, "text/csv;charset=utf-8");
+      });
+      document.getElementById("downloadBlankReconBtn").addEventListener("click", () => {
+        if (isHttpServer) { window.location.href = "/api/templates/blank_reconciliation_sample.csv"; return; }
+        triggerBlobDownload("blank_reconciliation_sample.csv", BLANK_RECON_CSV, "text/csv;charset=utf-8");
+      });
+
+      document.getElementById("uploadStepsCsvInput").addEventListener("change", async (e) => {
+        const f = e.target.files && e.target.files[0];
+        if (f) document.getElementById("workflowStepsCsv").value = await f.text();
+      });
+      document.getElementById("uploadReconCsvInput").addEventListener("change", async (e) => {
+        const f = e.target.files && e.target.files[0];
+        if (f) document.getElementById("reconciliationCsv").value = await f.text();
+      });
+
+      document.getElementById("downloadCapsuleBtn").addEventListener("click", () => {
+        if (!latestCapsule) return;
+        triggerBlobDownload("varinull-capsule-sprint4.json", JSON.stringify(latestCapsule, null, 2), "application/json");
+      });
+      document.getElementById("exportSanitizedCapsuleBtn").addEventListener("click", () => {
+        if (!latestCapsule) return;
+        const clean = sanitizeCapsuleJS(latestCapsule);
+        triggerBlobDownload("varinull-capsule-sprint4-sanitized.json", JSON.stringify(clean, null, 2), "application/json");
+      });
+      document.getElementById("downloadMarkdownBtn").addEventListener("click", () => {
+        if (!latestCapsule) return;
+        triggerBlobDownload("sprint4-compression-pipeline-spec.md", renderMarkdownSpecJS(latestCapsule), "text/markdown;charset=utf-8");
+      });
+
+      // Local Folder Profiler Rendering & Client/Server Execution
+      function renderScanProfile(scan) {
+        latestLocalScan = scan;
+        const tot = scan.totals || {};
+        const cards = document.getElementById("scanSummaryCards");
+        cards.innerHTML = `
+          <div class="metric-card">
+            <div class="metric-label">Files Profiled</div>
+            <div class="metric-value">${tot.total_files || 0}</div>
+            <div class="metric-sub">${tot.csv_tsv_files || 0} CSV/TSV · ${tot.xlsx_files || 0} XLSX · ${tot.json_files || 0} JSON · ${tot.pdf_files || 0} PDF</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Rows &amp; PDF Pages</div>
+            <div class="metric-value">${(tot.total_tabular_rows || 0).toLocaleString()}</div>
+            <div class="metric-sub">Tabular rows · ~${tot.total_pdf_pages_est || 0} PDF pages</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Excel Lookup Formulas</div>
+            <div class="metric-value">${tot.total_lookup_formulas || 0}</div>
+            <div class="metric-sub">${tot.total_excel_formulas || 0} total formulas inspected</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Orphan / Duplicate Keys</div>
+            <div class="metric-value">${(tot.join_orphan_keys_detected || 0) + (tot.total_duplicate_keys || 0)}</div>
+            <div class="metric-sub">${tot.join_orphan_keys_detected || 0} cross-file orphans · ${tot.total_duplicate_keys || 0} duplicates</div>
+          </div>
+        `;
+
+        const warnBox = document.getElementById("scanWarningsContainer");
+        const warns = scan.schema_warnings || [];
+        if (warns.length > 0) {
+          warnBox.innerHTML = warns.map(w => `
+            <div class="finding-item" style="padding:0.65rem 0.9rem; margin-bottom:0.45rem;">
+              <span class="badge MEDIUM">SCHEMA / KEY DRIFT</span>
+              <span style="font-size:0.83rem; margin-left:0.4rem;">${escapeHtml(w)}</span>
+            </div>
+          `).join("");
+        } else {
+          warnBox.innerHTML = "";
+        }
+
+        const fBody = document.querySelector("#scanFilesTable tbody");
+        fBody.innerHTML = (scan.files || []).map(f => {
+          const rowsPages = f.type === "PDF" ? `~${f.page_count_est || 1} pages` : `${(f.row_count || 0).toLocaleString()} rows`;
+          const colsSheets = f.type === "PDF"
+            ? `${Math.round((f.size_bytes || 0) / 1024)} KB`
+            : (f.type === "XLSX"
+                ? `${f.sheet_count || 0} sheets (${escapeHtml((f.sheet_names || []).join(", "))})`
+                : `${f.column_count || 0} cols (${escapeHtml((f.headers || []).slice(0, 5).join(", "))})`);
+          const nullStr = f.null_rate_pct !== undefined ? `${f.null_rate_pct}%` : "—";
+          const dups = f.duplicate_key_counts ? Object.entries(f.duplicate_key_counts).map(([k, v]) => `${k}: ${v} dup`).join(", ") : "";
+          const fNote = f.type === "XLSX" ? `${f.lookup_formula_count || 0} lookup / ${f.formula_count || 0} formulas` : "";
+          const issues = [fNote, dups].filter(Boolean).join(" · ") || "Clean";
+          return `
+            <tr>
+              <td class="mono">${escapeHtml(f.file)}</td>
+              <td><span class="pill mono">${escapeHtml(f.type)}</span></td>
+              <td class="mono">${rowsPages}</td>
+              <td>${colsSheets}</td>
+              <td class="mono">${nullStr}</td>
+              <td>${escapeHtml(issues)}</td>
+            </tr>
+          `;
+        }).join("");
+
+        const joinBox = document.getElementById("scanJoinBox");
+        const overlaps = scan.join_key_overlaps || [];
+        if (overlaps.length > 0) {
+          joinBox.innerHTML = `
+            <h4 style="font-size:0.86rem; margin:0 0 0.4rem;">Cross-File Join-Key Overlap &amp; Orphan Matrix (Zero Raw Keys Retained)</h4>
+            <table>
+              <thead>
+                <tr>
+                  <th>Source A [Key]</th>
+                  <th>Source B [Key]</th>
+                  <th>Matched IDs</th>
+                  <th>Orphan in A</th>
+                  <th>Orphan in B</th>
+                  <th>Overlap %</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${overlaps.map(o => `
+                  <tr>
+                    <td class="mono">${escapeHtml(o.source_a)}</td>
+                    <td class="mono">${escapeHtml(o.source_b)} ${o.header_name_mismatch ? '<span class="badge MEDIUM">HEADER MISMATCH</span>' : ''}</td>
+                    <td class="mono">${o.matched_keys}</td>
+                    <td class="mono">${o.orphan_in_a}</td>
+                    <td class="mono">${o.orphan_in_b}</td>
+                    <td class="mono">${o.jaccard_overlap_pct}%</td>
+                  </tr>
+                `).join("")}
+              </tbody>
+            </table>
+          `;
+        } else {
+          joinBox.innerHTML = "";
+        }
+
+        document.getElementById("scanResultsBox").classList.add("visible");
+      }
+
+      async function triggerServerScan(folderPath) {
+        const msg = document.getElementById("scanStatusMsg");
+        if (!isHttpServer) {
+          msg.textContent = "Running in standalone file:// mode, use Option B (Browser Folder/File Picker) right next to this input!";
+          return;
+        }
+        msg.textContent = `Scanning ${folderPath} locally...`;
+        try {
+          const resp = await fetch("/api/scan-local", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ path: folderPath })
+          });
+          const data = await resp.json();
+          if (!resp.ok) {
+            msg.textContent = `Scan error: ${data.detail || "Unable to read folder"}`;
+            return;
+          }
+          msg.textContent = `Scanned ${data.totals.total_files} file(s) in ${data.scanned_path} (read-only, zero raw values exported).`;
+          renderScanProfile(data);
+        } catch (err) {
+          msg.textContent = `Local server unreachable: ${err.message}`;
+        }
+      }
+
+      document.getElementById("scanServerFolderBtn").addEventListener("click", () => {
+        const val = document.getElementById("localFolderPathInput").value.trim();
+        if (val) triggerServerScan(val);
+      });
+      document.getElementById("trySampleFolderBtn").addEventListener("click", () => {
+        const samplePath = "sprint-4-report-compression/fixtures/sample_report_folder";
+        document.getElementById("localFolderPathInput").value = samplePath;
+        triggerServerScan(samplePath);
+      });
+
+      // Pure Browser Local FileList Profiler (works 100% offline in file:// too!)
+      const keyColRegex = /(?:^|[_\-\s])(id|key|code|acct|account|inv|invoice|cust|customer|tenant|sku|order|ref|record|tx|txn|sub)(?:$|[_\-\s])|^(id|record_key|account_id|acct_id|invoice_id|customer_id|tenant_id|order_id|sku)$/i;
+      function normStem(col) {
+        const map = { acct: "account", cust: "customer", inv: "invoice", txn: "transaction", tx: "transaction", num: "id", number: "id", code: "id", key: "id" };
+        return col.trim().toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "").split("_").filter(Boolean).map(p => map[p] || p).join("_");
+      }
+
+      async function profileBrowserFileList(fileList) {
+        const filesArr = Array.from(fileList || []).filter(f => /\.(csv|tsv|xlsx|json|pdf)$/i.test(f.name));
+        const msg = document.getElementById("scanStatusMsg");
+        if (filesArr.length === 0) {
+          msg.textContent = "No .csv, .tsv, .xlsx, .json, or .pdf files found in selection.";
+          return;
+        }
+        msg.textContent = `Profiling ${filesArr.length} selected file(s) locally in browser memory...`;
+        const totals = {
+          total_files: 0, csv_tsv_files: 0, xlsx_files: 0, json_files: 0, pdf_files: 0,
+          total_size_bytes: 0, total_tabular_rows: 0, total_pdf_pages_est: 0,
+          total_duplicate_keys: 0, total_excel_formulas: 0, total_lookup_formulas: 0,
+          join_orphan_keys_detected: 0, schema_drift_warnings: 0
+        };
+        const filesOut = [];
+        const keySets = [];
+        const warnings = [];
+
+        for (const f of filesArr.slice(0, 150)) {
+          const ext = "." + f.name.split(".").pop().toLowerCase();
+          const relName = f.webkitRelativePath || f.name;
+          totals.total_files++;
+          totals.total_size_bytes += f.size;
+
+          if (ext === ".csv" || ext === ".tsv") {
+            totals.csv_tsv_files++;
+            const txt = await f.text();
+            const rows = parseCsvRows(txt, ext === ".tsv" ? "\t" : ",");
+            const headers = (rows[0] || []).map(h => h.trim());
+            const keyCols = {};
+            const seen = {};
+            const dups = {};
+            headers.forEach((h, i) => { if (keyColRegex.test(h)) { keyCols[i] = h; seen[h] = new Set(); dups[h] = 0; } });
+            let dataRows = 0, empty = 0, cells = 0;
+            for (let r = 1; r < rows.length; r++) {
+              if (!rows[r].some(c => String(c || "").trim())) continue;
+              dataRows++;
+              if (dataRows <= 10000) {
+                for (let c = 0; c < headers.length; c++) {
+                  const v = String(rows[r][c] || "").trim();
+                  cells++;
+                  if (!v) empty++;
+                  else if (keyCols[c]) {
+                    const col = keyCols[c];
+                    if (seen[col].has(v)) dups[col]++;
+                    else seen[col].add(v);
+                  }
+                }
+              }
+            }
+            const nullPct = cells > 0 ? Math.round((empty / cells) * 1000) / 10 : 0;
+            totals.total_tabular_rows += dataRows;
+            Object.values(dups).forEach(d => { totals.total_duplicate_keys += d; });
+            Object.entries(seen).forEach(([col, set]) => {
+              if (set.size > 0) keySets.push({ file: relName, col, stem: normStem(col), set });
+            });
+            const nonZeroDups = Object.fromEntries(Object.entries(dups).filter(([, v]) => v > 0));
+            filesOut.push({ file: relName, type: ext.slice(1).toUpperCase(), size_bytes: f.size, row_count: dataRows, column_count: headers.length, headers: headers.slice(0, 30), null_rate_pct: nullPct, duplicate_key_counts: nonZeroDups });
+          } else if (ext === ".json") {
+            totals.json_files++;
+            let recs = [];
+            try {
+              const parsed = JSON.parse(await f.text());
+              if (Array.isArray(parsed)) recs = parsed;
+              else if (parsed && typeof parsed === "object") {
+                const k = ["records", "data", "items", "rows"].find(x => Array.isArray(parsed[x]));
+                recs = k ? parsed[k] : [parsed];
+              }
+            } catch (_) {}
+            const headers = Array.from(new Set(recs.slice(0, 500).flatMap(r => (r && typeof r === "object") ? Object.keys(r) : [])));
+            totals.total_tabular_rows += recs.length;
+            headers.filter(h => keyColRegex.test(h)).forEach(col => {
+              const set = new Set();
+              let dup = 0;
+              recs.forEach(r => {
+                const v = r && r[col] !== undefined && r[col] !== null ? String(r[col]).trim() : "";
+                if (v) { if (set.has(v)) dup++; else set.add(v); }
+              });
+              totals.total_duplicate_keys += dup;
+              if (set.size > 0) keySets.push({ file: relName, col, stem: normStem(col), set });
+            });
+            filesOut.push({ file: relName, type: "JSON", size_bytes: f.size, row_count: recs.length, column_count: headers.length, headers: headers.slice(0, 30), null_rate_pct: 0, duplicate_key_counts: {} });
+          } else if (ext === ".pdf") {
+            totals.pdf_files++;
+            const buf = new Uint8Array(await f.arrayBuffer());
+            const ascii = new TextDecoder("latin1").decode(buf);
+            const m = ascii.match(/\/Type\s*\/Page\b/g);
+            const pages = m ? m.length : Math.max(1, Math.ceil(f.size / 45000));
+            totals.total_pdf_pages_est += pages;
+            filesOut.push({ file: relName, type: "PDF", size_bytes: f.size, page_count_est: pages });
+          } else if (ext === ".xlsx") {
+            totals.xlsx_files++;
+            let xlsxInfo = { sheet_count: 1, sheets: [], total_rows: 0, formula_count: 0, lookup_formula_count: 0 };
+            if (isHttpServer) {
+              try {
+                const fd = new FormData();
+                fd.append("file", f);
+                const r = await fetch("/api/inspect-xlsx", { method: "POST", body: fd });
+                if (r.ok) xlsxInfo = await r.json();
+              } catch (_) {}
+            }
+            totals.total_tabular_rows += xlsxInfo.total_rows || 0;
+            totals.total_excel_formulas += xlsxInfo.formula_count || 0;
+            totals.total_lookup_formulas += xlsxInfo.lookup_formula_count || 0;
+            filesOut.push({
+              file: relName, type: "XLSX", size_bytes: f.size,
+              sheet_count: xlsxInfo.sheet_count || 1,
+              sheet_names: (xlsxInfo.sheets || []).map(s => s.name),
+              row_count: xlsxInfo.total_rows || 0,
+              formula_count: xlsxInfo.formula_count || 0,
+              lookup_formula_count: xlsxInfo.lookup_formula_count || 0,
+              null_rate_pct: 0, duplicate_key_counts: {}
+            });
+          }
+        }
+
+        const overlaps = [];
+        for (let i = 0; i < keySets.length; i++) {
+          for (let j = i + 1; j < keySets.length; j++) {
+            const a = keySets[i], b = keySets[j];
+            if (a.file === b.file) continue;
+            let inter = 0;
+            a.set.forEach(v => { if (b.set.has(v)) inter++; });
+            const sameStem = a.stem === b.stem || a.col.toLowerCase() === b.col.toLowerCase();
+            if (inter === 0 && !sameStem) continue;
+            const union = a.set.size + b.set.size - inter;
+            const orpA = a.set.size - inter, orpB = b.set.size - inter;
+            if (inter > 0) totals.join_orphan_keys_detected += orpA + orpB;
+            if (a.col !== b.col && inter > 0) {
+              warnings.push(`Join-key header drift between ${a.file} (${a.col}) and ${b.file} (${b.col}), ${inter} shared IDs.`);
+            }
+            overlaps.push({
+              source_a: `${a.file} [${a.col}]`, source_b: `${b.file} [${b.col}]`,
+              header_name_mismatch: a.col !== b.col,
+              source_a_unique_keys: a.set.size, source_b_unique_keys: b.set.size,
+              matched_keys: inter, orphan_in_a: orpA, orphan_in_b: orpB,
+              jaccard_overlap_pct: union > 0 ? Math.round((inter / union) * 1000) / 10 : 0
+            });
+          }
+        }
+        totals.schema_drift_warnings = warnings.length;
+
+        const suggestedFormats = [];
+        if (totals.csv_tsv_files + totals.xlsx_files > 0) suggestedFormats.push("csv_excel_exports");
+        if (totals.pdf_files > 0) suggestedFormats.push("pdf_invoices_or_contracts");
+        if (totals.json_files > 0) suggestedFormats.push("cloud_or_saas_billing");
+
+        const suggestedBottlenecks = ["no_signoff_audit_trail"];
+        if (totals.csv_tsv_files + totals.xlsx_files >= 2 || totals.total_lookup_formulas > 0) suggestedBottlenecks.push("manual_copy_paste_joins");
+        if (totals.join_orphan_keys_detected > 0 || totals.total_duplicate_keys > 0) suggestedBottlenecks.push("reconciliation_mismatches");
+        if (totals.schema_drift_warnings > 0) suggestedBottlenecks.push("schema_drift_or_dirty_exports");
+
+        msg.textContent = `Profiled ${totals.total_files} local file(s) directly in browser memory (zero raw values retained).`;
+        renderScanProfile({
+          scanned_path: "<Browser Local Selection>",
+          scanned_at: new Date().toISOString(),
+          zero_raw_values_exported: true,
+          totals,
+          files: filesOut,
+          join_key_overlaps: overlaps,
+          schema_warnings: warnings,
+          suggested_inputs: {
+            exports_per_run: totals.total_files,
+            source_formats: suggestedFormats,
+            bottleneck_types: suggestedBottlenecks
+          }
+        });
+      }
+
+      document.getElementById("browserFolderPicker").addEventListener("change", (e) => profileBrowserFileList(e.target.files));
+      document.getElementById("browserMultiFilesPicker").addEventListener("change", (e) => profileBrowserFileList(e.target.files));
+
+      document.getElementById("applyScanSuggestionsBtn").addEventListener("click", () => {
+        if (!latestLocalScan || !latestLocalScan.suggested_inputs) return;
+        const sug = latestLocalScan.suggested_inputs;
+        if (sug.exports_per_run) document.getElementById("exportsPerRun").value = sug.exports_per_run;
+        (sug.source_formats || []).forEach(v => {
+          const el = document.querySelector(`input[name="source_formats"][value="${v}"]`);
+          if (el) el.checked = true;
+        });
+        (sug.bottleneck_types || []).forEach(v => {
+          const el = document.querySelector(`input[name="bottleneck_types"][value="${v}"]`);
+          if (el) el.checked = true;
+        });
+        runAssessment(collectPayloadFromForm());
+      });
+
+      // Initialize Demo Mode if active
+      (async function init() {
+        if (isDemoMode) {
+          let payload = DEMO_PAYLOAD;
+          if (isHttpServer) {
+            try {
+              const resp = await fetch("/api/demo");
+              if (resp.ok) {
+                const demoCap = await resp.json();
+                populateForm(demoCap);
+                renderCapsuleUI(demoCap, "Pre-loaded Vanguard Ops & Finance Demo Instance (Not saved to production DB)");
+                return;
+              }
+            } catch (_) { /* offline fallback */ }
+          }
+          populateForm(payload);
+          const cap = evaluateIntakeJS(payload, "demo");
+          renderCapsuleUI(cap, "Pre-loaded Vanguard Ops & Finance Demo Instance (Offline Browser Engine)");
+        }
+      })();
+    })();
+  </script>
+</body>
+</html>
